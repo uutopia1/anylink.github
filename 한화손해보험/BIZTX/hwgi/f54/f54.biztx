@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:bizTxInfo xmlns:ns0="http://www.tmaxsoft.com/schemas/anylink/" xmlns:ns2="http://www.tmaxsoft.com/schemas/anylink/reliableQueue/" xmlns:ns1="http://www.tmaxsoft.com/schemas/anylink/common/" xmlns:ns3="http://www.tmaxsoft.com/schemas/anylink/serverPlugin/">
+   <ns0:sysId>hwgi.f54</ns0:sysId>
+   <ns0:id>f54</ns0:id>
+   <ns0:name>[F54] 보험가입조회 파일전송</ns0:name>
+   <ns0:package>hwgi</ns0:package>
+   <ns0:version>0</ns0:version>
+   <ns0:resourceType>BizNode</ns0:resourceType>
+   <ns0:order>0</ns0:order>
+   <ns0:nodeType>Root</ns0:nodeType>
+   <ns0:businessTimeout>60000</ns0:businessTimeout>
+   <ns0:priority>Medium</ns0:priority>
+   <ns0:bypass>No</ns0:bypass>
+   <ns0:xa>No</ns0:xa>
+   <ns0:dedication>No</ns0:dedication>
+   <ns0:dupCheck>No</ns0:dupCheck>
+   <ns0:hasResponse>RequestResponse</ns0:hasResponse>
+   <ns0:useErrorHandle>false</ns0:useErrorHandle>
+   <ns0:errorHandle>
+      <ns0:errorResponseMethodType>None</ns0:errorResponseMethodType>
+   </ns0:errorHandle>
+   <ns0:isSequential>No</ns0:isSequential>
+   <ns0:isSystemCode>No</ns0:isSystemCode>
+   <ns0:requestMessageValidation>Yes</ns0:requestMessageValidation>
+   <ns0:branchingMethod>
+      <ns0:method>None</ns0:method>
+   </ns0:branchingMethod>
+   <ns0:readMoreMessage>
+      <ns0:method>None</ns0:method>
+      <ns0:length>0</ns0:length>
+   </ns0:readMoreMessage>
+   <ns0:messageOptionMethod>
+      <ns0:method>None</ns0:method>
+      <ns0:matchingMap>
+         <ns0:value></ns0:value>
+         <ns0:messageOption>
+            <ns0:name></ns0:name>
+            <ns0:value></ns0:value>
+         </ns0:messageOption>
+      </ns0:matchingMap>
+   </ns0:messageOptionMethod>
+</ns0:bizTxInfo>

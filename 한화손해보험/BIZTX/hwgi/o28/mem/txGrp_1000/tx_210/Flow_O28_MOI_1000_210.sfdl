@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:Package xmlns:xpdl="http://www.wfmc.org/2004/XPDL2.0alpha" xmlns:tmax="http://www.tmaxsoft.com/anylink/XPDL20/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xpdl:Pools>
+    <xpdl:Pool Id="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg_Pool_014402" Process="Flow_O28_MOI_1000_210" Orientation="VERTICAL">
+      <xpdl:Lanes>
+        <xpdl:Lane Id="tx210_Lane_Service" Name="서비스" ParentPool="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg_Pool_014402">
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo Height="600.0" Width="300.0" BorderColor="bbbdee"/>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Lane>
+        <xpdl:Lane Id="tx210_Lane_SystemError" Name="시스템 오류" ParentPool="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg_Pool_014402">
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo Height="600.0" Width="300.0" BorderColor="e1a2a4"/>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Lane>
+      </xpdl:Lanes>
+    </xpdl:Pool>
+  </xpdl:Pools>
+  <xpdl:Artifacts>
+    <xpdl:Artifact tmax:annotationType="Note" Id="Flow_O28_MOI_1000_210_Note_01F12F" Name="Note" ArtifactType="Annotation">
+      <tmax:AnnotationDescription>MEM → MOI
+1. 요청헤더 매핑
+   - 전문종별코드
+     - kindCode : 1000 → 1000
+ 2. 응답헤더 매핑
+    - 전문종별코드
+     - kindCode : 1010 → 1010</tmax:AnnotationDescription>
+      <xpdl:NodeGraphicsInfos>
+        <xpdl:NodeGraphicsInfo tmax:fontColor="000000" tmax:parentId="Flow_O28_MOI_1000_210" FillColor="ffffe1" Height="154.0" Width="217.0">
+          <xpdl:Coordinates XCoordinate="601.0" YCoordinate="1.0"/>
+        </xpdl:NodeGraphicsInfo>
+      </xpdl:NodeGraphicsInfos>
+    </xpdl:Artifact>
+  </xpdl:Artifacts>
+  <xpdl:WorkflowProcesses>
+    <xpdl:WorkflowProcess Id="Flow_O28_MOI_1000_210" Name="Flow_O28_MOI_1000_210" tmax:Package="hwgi.o28.mem.txGrp_1000.tx_210">
+      <xpdl:ProcessHeader>
+        <xpdl:Created>2023-08-14T09:59:11+09:00</xpdl:Created>
+        <xpdl:Description>This is a serviceflow process.</xpdl:Description>
+      </xpdl:ProcessHeader>
+      <xpdl:RedefinableHeader>
+        <xpdl:Version>2.0.0</xpdl:Version>
+      </xpdl:RedefinableHeader>
+      <xpdl:FormalParameters/>
+      <xpdl:DataFields>
+        <xpdl:DataField Id="errorCode" Name="errorCode" tmax:visible="true">
+          <xpdl:DataType>
+            <xpdl:BasicType Type="STRING"/>
+          </xpdl:DataType>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute scope="instance" messageClassName="" messageID=""/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+        <xpdl:DataField Id="errorString" Name="errorString" tmax:visible="true">
+          <xpdl:DataType>
+            <xpdl:BasicType Type="STRING"/>
+          </xpdl:DataType>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute scope="instance" messageClassName="" messageID=""/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+        <xpdl:DataField Id="CommonHeader" Name="CommonHeader" tmax:visible="true">
+          <xpdl:DataType/>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute scope="instance" messageClassName="hwgi.o28.mem.CommonHeader" messageID="hwgi.o28.mem:CommonHeader.umsg" type="DataObject"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+        <xpdl:DataField Id="Request" Name="Request" tmax:visible="true">
+          <xpdl:DataType/>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute scope="instance" messageClassName="hwgi.o28.mem.txGrp_1000.tx_210.Request" messageID="hwgi.o28.mem.txGrp_1000.tx_210:Request.umsg" type="DataObject"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+        <xpdl:DataField Id="Response" Name="Response" tmax:visible="true">
+          <xpdl:DataType/>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute scope="instance" messageClassName="hwgi.o28.mem.txGrp_1000.tx_210.Response" messageID="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg" type="DataObject"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+      </xpdl:DataFields>
+      <xpdl:Activities>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_Message_START_Event_011B08" Name="Message">
+          <xpdl:Description>Message</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:StartEvent Trigger="Message">
+              <xpdl:TriggerResultMessage/>
+            </xpdl:StartEvent>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="ServiceExtendedAttribute">
+              <tmax:ServiceExtendedAttribute>
+                <tmax:inputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Request</tmax:variableId>
+                </tmax:inputVariableList>
+                <tmax:outputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Response</tmax:variableId>
+                </tmax:outputVariableList>
+              </tmax:ServiceExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+            <xpdl:ExtendedAttribute Name="MessageEventExtendedAttribute">
+              <tmax:EventExtendedAttribute serviceId="hwgi.o28.mem.txGrp_1000.tx_210:Flow_O28_MOI_1000_210:Flow_O28_MOI_1000_210_Message_START_Event_011B08" noLogging="false" checkPoint="false" savePoint="false" type="internal" autoUnregister="false">
+                <tmax:mappingInfo>
+                  <tmax:inputVariableList>
+                    <tmax:variableId>CommonHeader</tmax:variableId>
+                    <tmax:variableId>Request</tmax:variableId>
+                  </tmax:inputVariableList>
+                  <tmax:outputVariableList>
+                    <tmax:variableId>CommonHeader</tmax:variableId>
+                    <tmax:variableId>Response</tmax:variableId>
+                  </tmax:outputVariableList>
+                </tmax:mappingInfo>
+              </tmax:EventExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates YCoordinate="53.0" XCoordinate="133.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_Mapping_016A0A" Name="요청매핑" StartMode="Automatic" FinishMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute noLogging="false" checkPoint="false" savePoint="false" type="MAPPING" taskMode="Mapping">
+                <tmax:inputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Request</tmax:variableId>
+                </tmax:inputVariableList>
+                <tmax:outputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Request</tmax:variableId>
+                </tmax:outputVariableList>
+                <tmax:inputMapping owner="MINE">
+                  <tmax:resourceClassName>Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_016A0AIN</tmax:resourceClassName>
+                  <tmax:resourceId>hwgi.o28.mem.txGrp_1000.tx_210:Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_016A0AIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.o28.mem.txGrp_1000.tx_210</tmax:resourcePath>
+                  <tmax:resourceContent>
+                    <map resourceType="MAP" creator="" owner="" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210" physicalName="Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_016A0AIN" logicalName="" resourceId="hwgi.o28.mem.txGrp_1000.tx_210:Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_016A0AIN.map" resourceGroup="" xmlns="http://www.tmaxsoft.com/promapper/map">
+                      <input alias="contextCommonHeader_SRC" comments="" arraySize="0" logicalName="commonHeader" physicalName="CommonHeader" referenceId="hwgi.o28.mem:CommonHeader.umsg" resourcePath="hwgi.o28.mem">
+                        <variable name="CommonHeader" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem:CommonHeader.umsg" physicalName="CommonHeader" logicalName="commonHeader" resourcePath="hwgi.o28.mem"/>
+                        </variable>
+                      </input>
+                      <input alias="contextRequest_SRC" comments="" arraySize="0" logicalName="request" physicalName="Request" referenceId="hwgi.o28.mem.txGrp_1000.tx_210:Request.umsg" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210">
+                        <variable name="Request" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem.txGrp_1000.tx_210:Request.umsg" physicalName="Request" logicalName="request" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210"/>
+                        </variable>
+                      </input>
+                      <output alias="contextCommonHeader_TGT" comments="" logicalName="commonHeader" physicalName="CommonHeader" referenceId="hwgi.o28.mem:CommonHeader.umsg" resourcePath="hwgi.o28.mem" arraySize="0">
+                        <variable name="CommonHeader" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem:CommonHeader.umsg" physicalName="CommonHeader" logicalName="commonHeader" resourcePath="hwgi.o28.mem"/>
+                        </variable>
+                      </output>
+                      <output alias="contextRequest_TGT" comments="" logicalName="request" physicalName="Request" referenceId="hwgi.o28.mem.txGrp_1000.tx_210:Request.umsg" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210" arraySize="0">
+                        <variable name="Request" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem.txGrp_1000.tx_210:Request.umsg" physicalName="Request" logicalName="request" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210"/>
+                        </variable>
+                      </output>
+                      <assign comments="FROM Logical Name-tranCode;TO Logical Name-tranCode;" fromExpression="contextCommonHeader_SRC.tranCode" toExpression="contextCommonHeader_TGT.tranCode">
+                        <fromField physicalName="tranCode" logicalName="tranCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="tranCode" logicalName="tranCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-kindCode;TO Logical Name-kindCode;" fromExpression="contextCommonHeader_SRC.kindCode" toExpression="contextCommonHeader_TGT.kindCode">
+                        <fromField physicalName="kindCode" logicalName="kindCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="kindCode" logicalName="kindCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-oprCode;TO Logical Name-oprCode;" fromExpression="contextCommonHeader_SRC.oprCode" toExpression="contextCommonHeader_TGT.oprCode">
+                        <fromField physicalName="oprCode" logicalName="oprCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="oprCode" logicalName="oprCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-sendOrgCode;TO Logical Name-sendOrgCode;" fromExpression="contextCommonHeader_SRC.sendOrgCode" toExpression="contextCommonHeader_TGT.sendOrgCode">
+                        <fromField physicalName="sendOrgCode" logicalName="sendOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="sendOrgCode" logicalName="sendOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-recvOrgCode;TO Logical Name-recvOrgCode;" fromExpression="contextCommonHeader_SRC.recvOrgCode" toExpression="contextCommonHeader_TGT.recvOrgCode">
+                        <fromField physicalName="recvOrgCode" logicalName="recvOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="recvOrgCode" logicalName="recvOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-userId;TO Logical Name-userId;" fromExpression="contextCommonHeader_SRC.userId" toExpression="contextCommonHeader_TGT.userId">
+                        <fromField physicalName="userId" logicalName="userId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="userId" logicalName="userId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-ifid;TO Logical Name-ifid;" fromExpression="contextRequest_SRC.ifid" toExpression="contextRequest_TGT.ifid">
+                        <fromField physicalName="ifid" logicalName="ifid" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="ifid" logicalName="ifid" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-requestDate;TO Logical Name-requestDate;" fromExpression="contextRequest_SRC.requestDate" toExpression="contextRequest_TGT.requestDate">
+                        <fromField physicalName="requestDate" logicalName="requestDate" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="requestDate" logicalName="requestDate" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-requestNo;TO Logical Name-requestNo;" fromExpression="contextRequest_SRC.requestNo" toExpression="contextRequest_TGT.requestNo">
+                        <fromField physicalName="requestNo" logicalName="requestNo" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="requestNo" logicalName="requestNo" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-systemId;TO Logical Name-systemId;" fromExpression="contextRequest_SRC.systemId" toExpression="contextRequest_TGT.systemId">
+                        <fromField physicalName="systemId" logicalName="systemId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="systemId" logicalName="systemId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-regstrGbCd;TO Logical Name-regstrGbCd;" fromExpression="contextRequest_SRC.regstrGbCd" toExpression="contextRequest_TGT.regstrGbCd">
+                        <fromField physicalName="regstrGbCd" logicalName="regstrGbCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="regstrGbCd" logicalName="regstrGbCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-sigunguCd;TO Logical Name-sigunguCd;" fromExpression="contextRequest_SRC.sigunguCd" toExpression="contextRequest_TGT.sigunguCd">
+                        <fromField physicalName="sigunguCd" logicalName="sigunguCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="sigunguCd" logicalName="sigunguCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-bjdongCd;TO Logical Name-bjdongCd;" fromExpression="contextRequest_SRC.bjdongCd" toExpression="contextRequest_TGT.bjdongCd">
+                        <fromField physicalName="bjdongCd" logicalName="bjdongCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="bjdongCd" logicalName="bjdongCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-platGbCd;TO Logical Name-platGbCd;" fromExpression="contextRequest_SRC.platGbCd" toExpression="contextRequest_TGT.platGbCd">
+                        <fromField physicalName="platGbCd" logicalName="platGbCd" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="platGbCd" logicalName="platGbCd" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-bun;TO Logical Name-bun;" fromExpression="contextRequest_SRC.bun" toExpression="contextRequest_TGT.bun">
+                        <fromField physicalName="bun" logicalName="bun" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="bun" logicalName="bun" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-ji;TO Logical Name-ji;" fromExpression="contextRequest_SRC.ji" toExpression="contextRequest_TGT.ji">
+                        <fromField physicalName="ji" logicalName="ji" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="ji" logicalName="ji" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-naRoadCd;TO Logical Name-naRoadCd;" fromExpression="contextRequest_SRC.naRoadCd" toExpression="contextRequest_TGT.naRoadCd">
+                        <fromField physicalName="naRoadCd" logicalName="naRoadCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="naRoadCd" logicalName="naRoadCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-naBjdongCd;TO Logical Name-naBjdongCd;" fromExpression="contextRequest_SRC.naBjdongCd" toExpression="contextRequest_TGT.naBjdongCd">
+                        <fromField physicalName="naBjdongCd" logicalName="naBjdongCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="naBjdongCd" logicalName="naBjdongCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-naUgrndCd;TO Logical Name-naUgrndCd;" fromExpression="contextRequest_SRC.naUgrndCd" toExpression="contextRequest_TGT.naUgrndCd">
+                        <fromField physicalName="naUgrndCd" logicalName="naUgrndCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="naUgrndCd" logicalName="naUgrndCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-naMainBun;TO Logical Name-naMainBun;" fromExpression="contextRequest_SRC.naMainBun" toExpression="contextRequest_TGT.naMainBun">
+                        <fromField physicalName="naMainBun" logicalName="naMainBun" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="naMainBun" logicalName="naMainBun" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-naSubBun;TO Logical Name-naSubBun;" fromExpression="contextRequest_SRC.naSubBun" toExpression="contextRequest_TGT.naSubBun">
+                        <fromField physicalName="naSubBun" logicalName="naSubBun" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="naSubBun" logicalName="naSubBun" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <postProcessCode/>
+                      <userClassName/>
+                    </map>
+                  </tmax:resourceContent>
+                </tmax:inputMapping>
+                <tmax:soapFaultReply>false</tmax:soapFaultReply>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo tmax:fontColor="3e3f40" Height="60.0" Width="150.0" FillColor="6384bb">
+              <xpdl:Coordinates YCoordinate="126.0" XCoordinate="76.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_None_END_Event_011D0B" Name="None">
+          <xpdl:Description>None</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:EndEvent Result="None"/>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
+              <tmax:EventExtendedAttribute noLogging="false" checkPoint="false" savePoint="false" type="internal" autoUnregister="false"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates YCoordinate="516.0" XCoordinate="133.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_HTTP_01AE42" Name="HTTP" StartMode="Automatic" FinishMode="Automatic">
+          <xpdl:Description>Call HTTP Adapter Service</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute serviceId="hwgi.o28.mem.txGrp_1000.tx_210:OutB_O28_MOI_1000_210.orule" noLogging="false" checkPoint="false" savePoint="false" type="HTTP" taskMode="Service" transMode="Request">
+                <tmax:inputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Request</tmax:variableId>
+                </tmax:inputVariableList>
+                <tmax:outputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Response</tmax:variableId>
+                </tmax:outputVariableList>
+                <tmax:soapFaultReply>false</tmax:soapFaultReply>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo tmax:fontColor="3e3f40" Height="60.0" Width="150.0" FillColor="6384bb">
+              <xpdl:Coordinates YCoordinate="223.0" XCoordinate="76.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_Mapping_019A78" Name="응답매핑" StartMode="Automatic" FinishMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute noLogging="false" checkPoint="false" savePoint="false" type="MAPPING" taskMode="Mapping">
+                <tmax:inputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Response</tmax:variableId>
+                </tmax:inputVariableList>
+                <tmax:outputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Response</tmax:variableId>
+                </tmax:outputVariableList>
+                <tmax:inputMapping owner="MINE">
+                  <tmax:resourceClassName>Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_019A78IN</tmax:resourceClassName>
+                  <tmax:resourceId>hwgi.o28.mem.txGrp_1000.tx_210:Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_019A78IN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.o28.mem.txGrp_1000.tx_210</tmax:resourcePath>
+                  <tmax:resourceContent>
+                    <map resourceType="MAP" creator="" owner="" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210" physicalName="Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_019A78IN" logicalName="" resourceId="hwgi.o28.mem.txGrp_1000.tx_210:Flow_O28_MOI_1000_210_Flow_O28_MOI_1000_210_Mapping_019A78IN.map" resourceGroup="" xmlns="http://www.tmaxsoft.com/promapper/map">
+                      <input alias="contextCommonHeader_SRC" comments="" arraySize="0" logicalName="commonHeader" physicalName="CommonHeader" referenceId="hwgi.o28.mem:CommonHeader.umsg" resourcePath="hwgi.o28.mem">
+                        <variable name="CommonHeader" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem:CommonHeader.umsg" physicalName="CommonHeader" logicalName="commonHeader" resourcePath="hwgi.o28.mem"/>
+                        </variable>
+                      </input>
+                      <input alias="contextResponse_SRC" comments="" arraySize="0" logicalName="response" physicalName="Response" referenceId="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210">
+                        <variable name="Response" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg" physicalName="Response" logicalName="response" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210"/>
+                        </variable>
+                      </input>
+                      <output alias="contextCommonHeader_TGT" comments="" logicalName="commonHeader" physicalName="CommonHeader" referenceId="hwgi.o28.mem:CommonHeader.umsg" resourcePath="hwgi.o28.mem" arraySize="0">
+                        <variable name="CommonHeader" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem:CommonHeader.umsg" physicalName="CommonHeader" logicalName="commonHeader" resourcePath="hwgi.o28.mem"/>
+                        </variable>
+                      </output>
+                      <output alias="contextResponse_TGT" comments="" logicalName="response" physicalName="Response" referenceId="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210" arraySize="0">
+                        <variable name="Response" scope="context" size="0">
+                          <structure resourceId="hwgi.o28.mem.txGrp_1000.tx_210:Response.umsg" physicalName="Response" logicalName="response" resourcePath="hwgi.o28.mem.txGrp_1000.tx_210"/>
+                        </variable>
+                      </output>
+                      <assign comments="FROM Logical Name-tranCode;TO Logical Name-tranCode;" fromExpression="contextCommonHeader_SRC.tranCode" toExpression="contextCommonHeader_TGT.tranCode">
+                        <fromField physicalName="tranCode" logicalName="tranCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="tranCode" logicalName="tranCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-kindCode;TO Logical Name-kindCode;" fromExpression="contextCommonHeader_SRC.kindCode" toExpression="contextCommonHeader_TGT.kindCode">
+                        <fromField physicalName="kindCode" logicalName="kindCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="kindCode" logicalName="kindCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-oprCode;TO Logical Name-oprCode;" fromExpression="contextCommonHeader_SRC.oprCode" toExpression="contextCommonHeader_TGT.oprCode">
+                        <fromField physicalName="oprCode" logicalName="oprCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="oprCode" logicalName="oprCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-sendOrgCode;TO Logical Name-sendOrgCode;" fromExpression="contextCommonHeader_SRC.sendOrgCode" toExpression="contextCommonHeader_TGT.sendOrgCode">
+                        <fromField physicalName="sendOrgCode" logicalName="sendOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="sendOrgCode" logicalName="sendOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-recvOrgCode;TO Logical Name-recvOrgCode;" fromExpression="contextCommonHeader_SRC.recvOrgCode" toExpression="contextCommonHeader_TGT.recvOrgCode">
+                        <fromField physicalName="recvOrgCode" logicalName="recvOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="recvOrgCode" logicalName="recvOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-userId;TO Logical Name-userId;" fromExpression="contextCommonHeader_SRC.userId" toExpression="contextCommonHeader_TGT.userId">
+                        <fromField physicalName="userId" logicalName="userId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="userId" logicalName="userId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-ifid;TO Logical Name-ifid;" fromExpression="contextResponse_SRC.ifid" toExpression="contextResponse_TGT.ifid">
+                        <fromField physicalName="ifid" logicalName="ifid" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="ifid" logicalName="ifid" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-requestDate;TO Logical Name-requestDate;" fromExpression="contextResponse_SRC.requestDate" toExpression="contextResponse_TGT.requestDate">
+                        <fromField physicalName="requestDate" logicalName="requestDate" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="requestDate" logicalName="requestDate" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-requestNo;TO Logical Name-requestNo;" fromExpression="contextResponse_SRC.requestNo" toExpression="contextResponse_TGT.requestNo">
+                        <fromField physicalName="requestNo" logicalName="requestNo" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="requestNo" logicalName="requestNo" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-systemId;TO Logical Name-systemId;" fromExpression="contextResponse_SRC.systemId" toExpression="contextResponse_TGT.systemId">
+                        <fromField physicalName="systemId" logicalName="systemId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="systemId" logicalName="systemId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-resultCode;TO Logical Name-resultCode;" fromExpression="contextResponse_SRC.resultCode" toExpression="contextResponse_TGT.resultCode">
+                        <fromField physicalName="resultCode" logicalName="resultCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                        <toField physicalName="resultCode" logicalName="resultCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure" xmlns:mes="http://www.tmaxsoft.com/promapper/message"/>
+                      </assign>
+                      <assign comments="FROM Logical Name-mgmBldrgstPk;TO Logical Name-mgmBldrgstPk;" fromExpression="contextResponse_SRC.body*.mgmBldrgstPk" toExpression="contextResponse_TGT.body*.mgmBldrgstPk">
+                        <fromField physicalName="mgmBldrgstPk" logicalName="mgmBldrgstPk" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                        <toField physicalName="mgmBldrgstPk" logicalName="mgmBldrgstPk" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                      </assign>
+                      <assign comments="FROM Logical Name-regstrGbCd;TO Logical Name-regstrGbCd;" fromExpression="contextResponse_SRC.body*.regstrGbCd" toExpression="contextResponse_TGT.body*.regstrGbCd">
+                        <fromField physicalName="regstrGbCd" logicalName="regstrGbCd" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                        <toField physicalName="regstrGbCd" logicalName="regstrGbCd" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                      </assign>
+                      <assign comments="FROM Logical Name-regstrKindCd;TO Logical Name-regstrKindCd;" fromExpression="contextResponse_SRC.body*.regstrKindCd" toExpression="contextResponse_TGT.body*.regstrKindCd">
+                        <fromField physicalName="regstrKindCd" logicalName="regstrKindCd" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                        <toField physicalName="regstrKindCd" logicalName="regstrKindCd" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                      </assign>
+                      <assign comments="FROM Logical Name-bldNm;TO Logical Name-bldNm;" fromExpression="contextResponse_SRC.body*.bldNm" toExpression="contextResponse_TGT.body*.bldNm">
+                        <fromField physicalName="bldNm" logicalName="bldNm" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                        <toField physicalName="bldNm" logicalName="bldNm" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                      </assign>
+                      <assign comments="FROM Logical Name-totarea;TO Logical Name-totarea;" fromExpression="contextResponse_SRC.body*.totarea" toExpression="contextResponse_TGT.body*.totarea">
+                        <fromField physicalName="totarea" logicalName="totarea" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                        <toField physicalName="totarea" logicalName="totarea" fieldType="string" includeStructurePath="" includeStructureName="" length="" decimal="-1" array="" keyword="" comments="" metaId="" attributeTag="" fieldControlTag="" referenceFieldId="" referenceId=""/>
+                      </assign>
+                      <postProcessCode/>
+                      <userClassName/>
+                    </map>
+                  </tmax:resourceContent>
+                </tmax:inputMapping>
+                <tmax:soapFaultReply>false</tmax:soapFaultReply>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo tmax:fontColor="3e3f40" Height="60.0" Width="150.0" FillColor="6384bb">
+              <xpdl:Coordinates YCoordinate="320.0" XCoordinate="76.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_ReplyMessage_017612" Name="정상 응답" StartMode="Automatic" FinishMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute noLogging="false" checkPoint="false" savePoint="false" type="SENDMESSAGE" taskMode="Service" transMode="Response" requestNodeId="Flow_O28_MOI_1000_210_Message_START_Event_011B08">
+                <tmax:outputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Response</tmax:variableId>
+                </tmax:outputVariableList>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo tmax:fontColor="3e3f40" Height="60.0" Width="150.0" FillColor="6384bb">
+              <xpdl:Coordinates YCoordinate="417.0" XCoordinate="76.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_Error_INTER_Event_01ED1D" Name="Error">
+          <xpdl:Description>Error</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:StartEvent Trigger="Error">
+              <xpdl:ResultError ErrorCode="All"/>
+            </xpdl:StartEvent>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
+              <tmax:EventExtendedAttribute serviceId="hwgi.o28.mem.txGrp_1000.tx_210:Flow_O28_MOI_1000_210:Flow_O28_MOI_1000_210_Error_INTER_Event_01ED1D" noLogging="false" checkPoint="false" savePoint="false" type="internal" autoUnregister="false"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates YCoordinate="53.0" XCoordinate="433.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_Mapping_016B1F" Name="시스템오류 매핑" StartMode="Automatic" FinishMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute noLogging="false" checkPoint="false" savePoint="false" type="MAPPING" taskMode="Mapping"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo tmax:fontColor="3e3f40" Height="60.0" Width="150.0" FillColor="6384bb">
+              <xpdl:Coordinates YCoordinate="126.0" XCoordinate="376.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_ReplyMessage_018D21" Name="오류 응답" StartMode="Automatic" FinishMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute noLogging="false" checkPoint="false" savePoint="false" type="SENDMESSAGE" taskMode="Service" transMode="Response" requestNodeId="Flow_O28_MOI_1000_210_Message_START_Event_011B08">
+                <tmax:outputVariableList>
+                  <tmax:variableId>CommonHeader</tmax:variableId>
+                  <tmax:variableId>Response</tmax:variableId>
+                </tmax:outputVariableList>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo tmax:fontColor="3e3f40" Height="60.0" Width="150.0" FillColor="6384bb">
+              <xpdl:Coordinates YCoordinate="223.0" XCoordinate="376.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="Flow_O28_MOI_1000_210_Terminate_END_Event_019224" Name="Terminate">
+          <xpdl:Description>Terminate</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:EndEvent Result="Terminate"/>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
+              <tmax:EventExtendedAttribute noLogging="false" checkPoint="false" savePoint="false" type="internal" autoUnregister="false">
+                <tmax:terminateErrorCause errorCause="LastError"/>
+              </tmax:EventExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates YCoordinate="332.0" XCoordinate="433.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+      </xpdl:Activities>
+      <xpdl:Transitions>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_01CF7B" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_Message_START_Event_011B08" To="Flow_O28_MOI_1000_210_Mapping_016A0A">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_01C77E" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_Mapping_016A0A" To="Flow_O28_MOI_1000_210_HTTP_01AE42">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_014E81" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_HTTP_01AE42" To="Flow_O28_MOI_1000_210_Mapping_019A78">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_019713" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_Mapping_019A78" To="Flow_O28_MOI_1000_210_ReplyMessage_017612">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_019717" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_ReplyMessage_017612" To="Flow_O28_MOI_1000_210_None_END_Event_011D0B">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_017627" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_Error_INTER_Event_01ED1D" To="Flow_O28_MOI_1000_210_Mapping_016B1F">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_01052A" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_Mapping_016B1F" To="Flow_O28_MOI_1000_210_ReplyMessage_018D21">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition Id="Flow_O28_MOI_1000_210_Transition_015A2D" Name="Transition" tmax:priority="0" From="Flow_O28_MOI_1000_210_ReplyMessage_018D21" To="Flow_O28_MOI_1000_210_Terminate_END_Event_019224">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+      </xpdl:Transitions>
+      <xpdl:ExtendedAttributes>
+        <xpdl:ExtendedAttribute Name="ProcessExtendedAttribute">
+          <tmax:ProcessExtendedAttribute lastModifiedTime="2023-08-14T11:00:07.779+09:00" backgroundColor="ffffff" serviceMake="true" processTimeOut="0">
+            <tmax:errorCodeMapper xsi:nil="true"/>
+          </tmax:ProcessExtendedAttribute>
+        </xpdl:ExtendedAttribute>
+      </xpdl:ExtendedAttributes>
+    </xpdl:WorkflowProcess>
+  </xpdl:WorkflowProcesses>
+</xpdl:Package>

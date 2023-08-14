@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+    <mes:structure resourceType="STRUCTURE" logicalName="commonHeader" physicalName="CommonHeader" resourcePath="hwgi.o28.mem" resourceId="hwgi.o28.mem:CommonHeader.umsg">
+        <str:structureField physicalName="tranCode" logicalName="tranCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="kindCode" logicalName="kindCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="oprCode" logicalName="oprCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="sendOrgCode" logicalName="sendOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="recvOrgCode" logicalName="recvOrgCode" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="userId" logicalName="userId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:messageInfo messageId="hwgi.o28.mem:CommonHeaderXML.msg" messagePhysicalName="CommonHeaderXML" messagePath="hwgi.o28.mem" messageType="XML" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    </mes:structure>
+    <mes:message resourceType="MESSAGE" messageType="XML" logicalName="commonHeader" physicalName="CommonHeaderXML" resourcePath="hwgi.o28.mem" resourceId="hwgi.o28.mem:CommonHeaderXML.msg" elementName="commonHeader" complexTypeName="commonHeader" structurePath="hwgi.o28.mem" structureName="CommonHeader" structureId="hwgi.o28.mem:CommonHeader.umsg">
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="tranCode" logicalName="tranCode" elementName="tranCode" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="kindCode" logicalName="kindCode" elementName="kindCode" isElement="true" nillable="false" typeName="xs:long" fieldType="long" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="oprCode" logicalName="oprCode" elementName="oprCode" isElement="true" nillable="false" typeName="xs:long" fieldType="long" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="sendOrgCode" logicalName="sendOrgCode" elementName="sendOrgCode" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="recvOrgCode" logicalName="recvOrgCode" elementName="recvOrgCode" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="userId" logicalName="userId" elementName="userId" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    </mes:message>
+</mes:umessage>
