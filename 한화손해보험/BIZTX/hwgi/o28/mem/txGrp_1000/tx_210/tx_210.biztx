@@ -4,7 +4,7 @@
    <ns0:id>tx_210</ns0:id>
    <ns0:name>[MEM][1000][210] 건축물대장 총괄표제부 조회</ns0:name>
    <ns0:package>hwgi.o28.mem.txGrp_1000</ns0:package>
-   <ns0:version>2</ns0:version>
+   <ns0:version>3</ns0:version>
    <ns0:resourceType>BizNode</ns0:resourceType>
    <ns0:parentId>hwgi.o28.mem.txGrp_1000</ns0:parentId>
    <ns0:order>0</ns0:order>

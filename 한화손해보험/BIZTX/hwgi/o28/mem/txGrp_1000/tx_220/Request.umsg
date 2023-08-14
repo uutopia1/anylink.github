@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+    <mes:structure resourceType="STRUCTURE" logicalName="request" physicalName="Request" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:Request.umsg">
+        <str:structureField physicalName="ifid" logicalName="ifid" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="requestDate" logicalName="requestDate" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="requestNo" logicalName="requestNo" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="systemId" logicalName="systemId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="regstrGbCd" logicalName="regstrGbCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="sigunguCd" logicalName="sigunguCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="bjdongCd" logicalName="bjdongCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="platGbCd" logicalName="platGbCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="bun" logicalName="bun" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="ji" logicalName="ji" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="naRoadCd" logicalName="naRoadCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="naBjdongCd" logicalName="naBjdongCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="naUgrndCd" logicalName="naUgrndCd" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="naMainBun" logicalName="naMainBun" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:structureField physicalName="naSubBun" logicalName="naSubBun" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+        <str:messageInfo messageId="hwgi.o28.mem.txGrp_1000.tx_220:RequestXML.msg" messagePhysicalName="RequestXML" messagePath="hwgi.o28.mem.txGrp_1000.tx_220" messageType="XML" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    </mes:structure>
+    <mes:message resourceType="MESSAGE" messageType="XML" logicalName="request" physicalName="RequestXML" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:RequestXML.msg" elementName="request" complexTypeName="request" structurePath="hwgi.o28.mem.txGrp_1000.tx_220" structureName="Request" structureId="hwgi.o28.mem.txGrp_1000.tx_220:Request.umsg">
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="ifid" logicalName="ifid" elementName="ifid" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="requestDate" logicalName="requestDate" elementName="requestDate" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="requestNo" logicalName="requestNo" elementName="requestNo" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="systemId" logicalName="systemId" elementName="systemId" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="regstrGbCd" logicalName="regstrGbCd" elementName="regstrGbCd" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="sigunguCd" logicalName="sigunguCd" elementName="sigunguCd" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="bjdongCd" logicalName="bjdongCd" elementName="bjdongCd" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="platGbCd" logicalName="platGbCd" elementName="platGbCd" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="bun" logicalName="bun" elementName="bun" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="ji" logicalName="ji" elementName="ji" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="naRoadCd" logicalName="naRoadCd" elementName="naRoadCd" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="naBjdongCd" logicalName="naBjdongCd" elementName="naBjdongCd" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="naUgrndCd" logicalName="naUgrndCd" elementName="naUgrndCd" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="naMainBun" logicalName="naMainBun" elementName="naMainBun" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+        <mes:messageField maxOccurs="1" minOccurs="1" physicalName="naSubBun" logicalName="naSubBun" elementName="naSubBun" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    </mes:message>
+</mes:umessage>
