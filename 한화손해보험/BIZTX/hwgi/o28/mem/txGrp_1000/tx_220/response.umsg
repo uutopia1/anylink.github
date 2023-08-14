@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure physicalName="response" logicalName="response" resourceType="STRUCTURE" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:response.umsg" resourceGroup="">
+    <str:structureField physicalName="ifid" logicalName="ifid" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="requestDate" logicalName="requestDate" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="requestNo" logicalName="requestNo" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="systemId" logicalName="systemId" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="resultCode" logicalName="resultCode" fieldType="long" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="body" logicalName="body" fieldType="include" includeStructureName="body" includeStructurePath="hwgi.o28.mem.txGrp_1000.tx_220" referenceId="hwgi.o28.mem.txGrp_1000.tx_220:body.umsg" array="unbounded" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+  </mes:structure>
+</mes:umessage>
