@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure physicalName="MSG" logicalName="MSG" resourceType="STRUCTURE" resourcePath="hwgi.f54" resourceId="hwgi.f54:MSG.umsg" resourceGroup="">
+    <str:structureField physicalName="field1" logicalName="field1" fieldType="string" decimal="0" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="filed2" logicalName="filed2" fieldType="string" decimal="0" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="field3" logicalName="field3" fieldType="string" decimal="0" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:messageInfo messagePath="hwgi.f54" messagePhysicalName="MSGFixedLength" messageType="FixedLength" messageId="hwgi.f54:MSGFixedLength.msg" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+  </mes:structure>
+  <mes:message physicalName="MSGFixedLength" logicalName="MSG" structureId="hwgi.f54:MSG.umsg" structureName="MSG" structurePath="hwgi.f54" resourcePath="hwgi.f54" resourceType="MESSAGE" resourceGroup="" resourceId="hwgi.f54:MSGFixedLength.msg" messageType="FixedLength" trimFlag="none">
+    <mes:messageField physicalName="field1" logicalName="field1" fieldType="string" decimal="0" array="" comments="" length="10" align="None" fill="" point="true" sign="false" encodeOption="Char" trailer="" pattern="yyyy-MM-dd" endian="Big" EOD="false"/>
+    <mes:messageField physicalName="filed2" logicalName="filed2" fieldType="string" decimal="0" array="" comments="" length="10" align="None" fill="" point="true" sign="false" encodeOption="Char" trailer="" pattern="yyyy-MM-dd" endian="Big" EOD="false"/>
+    <mes:messageField physicalName="field3" logicalName="field3" fieldType="string" decimal="0" array="" comments="" length="10" align="None" fill="" point="true" sign="false" encodeOption="Char" trailer="" pattern="yyyy-MM-dd" endian="Big" EOD="false"/>
+  </mes:message>
+</mes:umessage>
