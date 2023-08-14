@@ -61,6 +61,9 @@ public class MSGFixedLength extends com.tmax.promapper.engine.base.FixedLengthMe
             marshallNullObject(flFld);
         } else {
             
+            /** field3 */
+            flFld.setStringField(this, __root.getField3(this.masked), 10, Constants.ALIGN_NON, " ", 0, true, false, Constants.ENCODE_CHAR, null);
+            
             /** filed2 */
             flFld.setStringField(this, __root.getFiled2(this.masked), 10, Constants.ALIGN_NON, " ", 0, true, false, Constants.ENCODE_CHAR, null);
             
@@ -73,6 +76,10 @@ public class MSGFixedLength extends com.tmax.promapper.engine.base.FixedLengthMe
 
         
     private void marshallNullObject(FixedLengthMarshalFieldV2 flFld) throws Exception {
+            
+            /** field3 */
+
+                flFld.padByteArrayField(this, 10, " ");
             
             /** filed2 */
 
@@ -97,6 +104,7 @@ public class MSGFixedLength extends com.tmax.promapper.engine.base.FixedLengthMe
         
         set_field1(__root, flFld);
         set_filed2(__root, flFld);
+        set_field3(__root, flFld);
 
         setOffset(flFld.getOffset());
         __root.setMessageProperties(fieldPropertyMap);
@@ -129,6 +137,19 @@ public class MSGFixedLength extends com.tmax.promapper.engine.base.FixedLengthMe
             throw new Exception(esb.toString(), e);
         }
     }
+    private void set_field3(hwgi.f54.MSG __root, FixedLengthUnmarshalField flFld) throws Exception {
+        try {
+
+        /** field3 */
+        __root.setField3(flFld.getStringField(this, 10, Constants.ALIGN_NON, " ", 0, true, false, Constants.ENCODE_CHAR, Constants.TRIM_NONE), this.masked);
+    successFieldCount++;
+        } catch(Exception e) {
+            StringBuilder esb = new StringBuilder(e.getClass().getName()).append(" [FIELD: field3] ");
+            if(e.getMessage() != null)
+                esb.append(": ").append(e.getMessage());
+            throw new Exception(esb.toString(), e);
+        }
+    }
     
     protected static java.util.Map<String, MessageFieldProperty> fieldPropertyMap = new java.util.LinkedHashMap();
     public java.util.Map<String, MessageFieldProperty> getFieldPropertyMap() {
@@ -138,6 +159,7 @@ public class MSGFixedLength extends com.tmax.promapper.engine.base.FixedLengthMe
 
         fieldPropertyMap.put("field1", getProperty_field1());
         fieldPropertyMap.put("filed2", getProperty_filed2());
+        fieldPropertyMap.put("field3", getProperty_field3());
     }
 
     private static MessageFieldProperty getProperty_field1() {
@@ -149,6 +171,12 @@ public class MSGFixedLength extends com.tmax.promapper.engine.base.FixedLengthMe
     private static MessageFieldProperty getProperty_filed2() {
         MessageFieldProperty fldProp = null;
         fldProp = new MessageFieldProperty("filed2", "filed2", MessageFieldType.STRING, (String)null, null, "10", Constants.ALIGN_NON, " ", 0, true, false, null, null, null, null, null, Constants.TRIM_NONE, Constants.ENCODE_CHAR);
+        return fldProp;
+    }
+
+    private static MessageFieldProperty getProperty_field3() {
+        MessageFieldProperty fldProp = null;
+        fldProp = new MessageFieldProperty("field3", "field3", MessageFieldType.STRING, (String)null, null, "10", Constants.ALIGN_NON, " ", 0, true, false, null, null, null, null, null, Constants.TRIM_NONE, Constants.ENCODE_CHAR);
         return fldProp;
     }
 

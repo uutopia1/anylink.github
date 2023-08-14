@@ -74,6 +74,27 @@ public class MSG extends ProMapperDataObject implements ResourceMeta {
 
 
             
+    private String field3 = null;
+    
+    public String getField3() {
+        return field3;
+    }
+
+    public String getField3(boolean _masked) {
+        return StringUtil.nullableStringValueOf(getField3());
+    }
+                      
+    public void setField3(String field3) {
+        this.field3 = field3;
+        _setFlag = true;
+    }
+
+    public void setField3(String field3, boolean _masked) {
+        setField3(field3);
+    }
+
+
+            
     public Object clone() {
         MSG copyObj = new MSG();
         clone(copyObj);
@@ -83,6 +104,7 @@ public class MSG extends ProMapperDataObject implements ResourceMeta {
         MSG _mSG = (MSG) __mSG;
         _mSG.setField1(field1);
         _mSG.setFiled2(filed2);
+        _mSG.setField3(field3);
     }
     public String toString() {
         StringBuilder buffer = new StringBuilder();
@@ -98,6 +120,7 @@ public class MSG extends ProMapperDataObject implements ResourceMeta {
         int _size = 0; // field가 array인 경우 array size를 저장하는 변수
             buffer.append("field1 : ").append(field1).append("\n");
             buffer.append("filed2 : ").append(filed2).append("\n");
+            buffer.append("field3 : ").append(field3).append("\n");
     }    
     public String toString(int limit) {
         StringBuilder buffer = new StringBuilder();
@@ -118,17 +141,22 @@ public class MSG extends ProMapperDataObject implements ResourceMeta {
         if(buffer.length() < limit) {
             buffer.append("filed2 : ").append(filed2).append("\n");
         }
+        if(buffer.length() < limit) {
+            buffer.append("field3 : ").append(field3).append("\n");
+        }
     }    
     private static final Map fieldPropertyMap = null;
     
 /*    static {
         parentfieldPropertyMap = ProMapperDataObject.getFieldPropertyMapByStatic();
-        fieldPropertyMap = new java.util.LinkedHashMap( parentfieldPropertyMap.size() + 2);
+        fieldPropertyMap = new java.util.LinkedHashMap( parentfieldPropertyMap.size() + 3);
         fieldPropertyMap.putAll( parentfieldPropertyMap );
 
         fieldPropertyMap.put("field1"
                             , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
         fieldPropertyMap.put("filed2"
+                            , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
+        fieldPropertyMap.put("field3"
                             , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
     }*/
     
@@ -139,11 +167,12 @@ public class MSG extends ProMapperDataObject implements ResourceMeta {
     public static Map getFieldPropertyMapByStatic() {
         return fieldPropertyMap;
     }
-    private static final List<String> fieldNameList = new ArrayList<String>(2);
+    private static final List<String> fieldNameList = new ArrayList<String>(3);
     
     static {        
         fieldNameList.add("field1");
         fieldNameList.add("filed2");
+        fieldNameList.add("field3");
     }
     
     public List<String> getFieldNameList(){
@@ -160,6 +189,7 @@ public class MSG extends ProMapperDataObject implements ResourceMeta {
         switch(hashCode) {
             case -1274708361 : return getField1();
             case -1274506550 : return getFiled2();
+            case -1274708359 : return getField3();
             default : return null;
         }
     }
@@ -169,12 +199,14 @@ public class MSG extends ProMapperDataObject implements ResourceMeta {
         switch(hashCode) {
             case -1274708361 : setField1((String)arg);break;
             case -1274506550 : setFiled2((String)arg);break;
+            case -1274708359 : setField3((String)arg);break;
             default : return;
         }
     }
     public boolean isEmptyDataObjectMethod(){ 
         if (field1 != null) return false;
         if (filed2 != null) return false;
+        if (field3 != null) return false;
 
         return true;
     }
