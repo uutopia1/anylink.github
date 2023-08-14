@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure physicalName="body" logicalName="body" resourceType="STRUCTURE" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:body.umsg" resourceGroup="">
+    <str:structureField physicalName="mgmBldrgstPk" logicalName="mgmBldrgstPk" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="regstrGbCd" logicalName="regstrGbCd" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="regstrKindCd" logicalName="regstrKindCd" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="bldNm" logicalName="bldNm" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="totarea" logicalName="totarea" fieldType="string" array="" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+  </mes:structure>
+</mes:umessage>
