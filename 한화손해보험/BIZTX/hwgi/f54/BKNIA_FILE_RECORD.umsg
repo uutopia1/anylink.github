@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="BKNIA_파일_RECORD" physicalName="BKNIA_FILE_RECORD" resourceGroup="" resourceId="hwgi.f54:BKNIA_FILE_RECORD.umsg" resourcePath="hwgi.f54" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="" decimal="0" fieldType="binary" keyword="" logicalName="record" physicalName="record"/>
+    <str:messageInfo xmlns:str="http://www.tmaxsoft.com/promapper/structure" messageId="hwgi.f54:BKNIA_FILE_RECORDFixedLength.msg" messagePath="hwgi.f54" messagePhysicalName="BKNIA_FILE_RECORDFixedLength" messageType="FixedLength"/>
+  </mes:structure>
+  <mes:message defaultEncoding="EUC-KR" logicalName="BKNIA_FILE_레코드" messageType="FixedLength" physicalName="BKNIA_FILE_RECORDFixedLength" resourceGroup="" resourceId="hwgi.f54:BKNIA_FILE_RECORDFixedLength.msg" resourcePath="hwgi.f54" resourceType="MESSAGE" structureId="hwgi.f54:BKNIA_FILE_RECORD.umsg" structureName="BKNIA_FILE_RECORD" structurePath="hwgi.f54" trimFlag="none">
+    <mes:messageField EOD="false" align="None" decimal="0" encodeOption="Char" endian="Little" fieldType="binary" fill="" length="variable" logicalName="record" pattern="yyyy-MM-dd" physicalName="record" point="true" sign="false" trailer=""/>
+  </mes:message>
+</mes:umessage>

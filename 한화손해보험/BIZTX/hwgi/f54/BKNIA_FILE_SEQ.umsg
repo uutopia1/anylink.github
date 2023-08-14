@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="BKNIA_파일_SEQ" physicalName="BKNIA_FILE_SEQ" resourceGroup="" resourceId="hwgi.f54:BKNIA_FILE_SEQ.umsg" resourcePath="hwgi.f54" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField decimal="0" fieldType="integer" logicalName="Sequence_No" physicalName="Sequence_No" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField array="unbounded" decimal="0" fieldType="include" includeStructureName="BKNIA_FILE_RECORD" includeStructurePath="hwgi.f54" logicalName="Records" physicalName="Records" referenceId="hwgi.f54:BKNIA_FILE_RECORD.umsg" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:messageInfo messageId="hwgi.f54:BKNIA_FILE_SEQFixedLength.msg" messagePath="hwgi.f54" messagePhysicalName="BKNIA_FILE_SEQFixedLength" messageType="FixedLength" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+  </mes:structure>
+  <mes:message defaultEncoding="EUC-KR" logicalName="BKNIA_파일_SEQ" messageType="FixedLength" physicalName="BKNIA_FILE_SEQFixedLength" resourceGroup="" resourceId="hwgi.f54:BKNIA_FILE_SEQFixedLength.msg" resourcePath="hwgi.f54" resourceType="MESSAGE" structureId="hwgi.f54:BKNIA_FILE_SEQ.umsg" structureName="BKNIA_FILE_SEQ" structurePath="hwgi.f54" trimFlag="none">
+    <mes:messageField EOD="false" align="None" array="" comments="" decimal="0" encodeOption="Char" endian="Big" fieldType="integer" fill="" length="3" logicalName="Sequence_No" pattern="yyyy-MM-dd" physicalName="Sequence_No" point="true" sign="false" trailer=""/>
+    <mes:messageField EOD="false" align="None" array="unbounded" comments="" decimal="0" encodeOption="Char" endian="Big" fieldType="include" fill="" includeMessageName="BKNIA_FILE_RECORDFixedLength" includeMessagePath="hwgi.f54" length="" logicalName="Records" pattern="yyyy-MM-dd" physicalName="Records" point="true" referenceId="hwgi.f54:BKNIA_FILE_RECORDFixedLength.msg" referenceStructureName="BKNIA_FILE_RECORD" sign="false" trailer=""/>
+  </mes:message>
+</mes:umessage>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="BKNIA_파일_BLOCK" physicalName="BKNIA_FILE_BLOCK" resourceGroup="" resourceId="hwgi.f54:BKNIA_FILE_BLOCK.umsg" resourcePath="hwgi.f54" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" array="unbounded" comments="" decimal="0" fieldType="include" includeStructureName="BKNIA_FILE_SEQ" includeStructurePath="hwgi.f54" logicalName="Sequences" physicalName="Sequences" referenceId="hwgi.f54:BKNIA_FILE_SEQ.umsg"/>
+    <str:messageInfo xmlns:str="http://www.tmaxsoft.com/promapper/structure" messageId="hwgi.f54:BKNIA_FILE_BLOCKFixedLength.msg" messagePath="hwgi.f54" messagePhysicalName="BKNIA_FILE_BLOCKFixedLength" messageType="FixedLength"/>
+  </mes:structure>
+  <mes:message defaultEncoding="EUC-KR" logicalName="BKNIA_파일_BLOCK" messageType="FixedLength" physicalName="BKNIA_FILE_BLOCKFixedLength" resourceGroup="" resourceId="hwgi.f54:BKNIA_FILE_BLOCKFixedLength.msg" resourcePath="hwgi.f54" resourceType="MESSAGE" structureId="hwgi.f54:BKNIA_FILE_BLOCK.umsg" structureName="BKNIA_FILE_BLOCK" structurePath="hwgi.f54" trimFlag="none">
+    <mes:messageField EOD="false" align="None" array="unbounded" comments="" decimal="0" encodeOption="Char" endian="Little" fieldType="include" fill="" includeMessageName="BKNIA_FILE_SEQFixedLength" includeMessagePath="hwgi.f54" length="" logicalName="Sequences" pattern="yyyy-MM-dd" physicalName="Sequences" point="true" referenceId="hwgi.f54:BKNIA_FILE_SEQFixedLength.msg" referenceStructureName="BKNIA_FILE_SEQ" sign="false" trailer=""/>
+  </mes:message>
+</mes:umessage>
