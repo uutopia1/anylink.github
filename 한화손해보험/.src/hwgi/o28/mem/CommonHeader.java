@@ -1,5 +1,5 @@
 /*
- * 작성된 날짜: Aug 14, 2023
+ * 작성된 날짜: Aug 15, 2023
  * Copyright (c) 2023 TmaxSoft co., Ltd. All rights reserved.
  */
 package hwgi.o28.mem;
@@ -22,7 +22,7 @@ import com.tmax.promapper.engine.util.StringUtil;
  * @history
  * 성 명              일 자                     근 거 자 료                      변 경 내 용
  * -----------        --------                  --------------                   --------------------------    
- * AnyLink :       Aug 14, 2023                AnyLink 개발 :                신규 작성
+ * AnyLink :       Aug 15, 2023                AnyLink 개발 :                신규 작성
  * 
  */
 
@@ -32,128 +32,128 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
             super();
     }
     private boolean _setFlag = false;
-    private String tranCode = null;
+    private String serviceName = null;
     
-    public String getTranCode() {
-        return tranCode;
+    public String getServiceName() {
+        return serviceName;
     }
 
-    public String getTranCode(boolean _masked) {
-        return StringUtil.nullableStringValueOf(getTranCode());
+    public String getServiceName(boolean _masked) {
+        return StringUtil.nullableStringValueOf(getServiceName());
     }
                       
-    public void setTranCode(String tranCode) {
-        this.tranCode = tranCode;
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
         _setFlag = true;
     }
 
-    public void setTranCode(String tranCode, boolean _masked) {
-        setTranCode(tranCode);
+    public void setServiceName(String serviceName, boolean _masked) {
+        setServiceName(serviceName);
     }
 
 
             
-    private long kindCode;
+    private String useSystemCode = null;
     
-    public long getKindCode() {
-        return kindCode;
+    public String getUseSystemCode() {
+        return useSystemCode;
     }
 
-    public String getKindCode(boolean _masked) {
-        return String.valueOf(getKindCode());
+    public String getUseSystemCode(boolean _masked) {
+        return StringUtil.nullableStringValueOf(getUseSystemCode());
     }
                       
-    public void setKindCode(long kindCode) {
-        this.kindCode = kindCode;
+    public void setUseSystemCode(String useSystemCode) {
+        this.useSystemCode = useSystemCode;
         _setFlag = true;
     }
 
-    public void setKindCode(long kindCode, boolean _masked) {
-        setKindCode(kindCode);
+    public void setUseSystemCode(String useSystemCode, boolean _masked) {
+        setUseSystemCode(useSystemCode);
     }
 
 
             
-    private long oprCode;
+    private String certServerId = null;
     
-    public long getOprCode() {
-        return oprCode;
+    public String getCertServerId() {
+        return certServerId;
     }
 
-    public String getOprCode(boolean _masked) {
-        return String.valueOf(getOprCode());
+    public String getCertServerId(boolean _masked) {
+        return StringUtil.nullableStringValueOf(getCertServerId());
     }
                       
-    public void setOprCode(long oprCode) {
-        this.oprCode = oprCode;
+    public void setCertServerId(String certServerId) {
+        this.certServerId = certServerId;
         _setFlag = true;
     }
 
-    public void setOprCode(long oprCode, boolean _masked) {
-        setOprCode(oprCode);
+    public void setCertServerId(String certServerId, boolean _masked) {
+        setCertServerId(certServerId);
     }
 
 
             
-    private String sendOrgCode = null;
+    private String transactionUniqueId = null;
     
-    public String getSendOrgCode() {
-        return sendOrgCode;
+    public String getTransactionUniqueId() {
+        return transactionUniqueId;
     }
 
-    public String getSendOrgCode(boolean _masked) {
-        return StringUtil.nullableStringValueOf(getSendOrgCode());
+    public String getTransactionUniqueId(boolean _masked) {
+        return StringUtil.nullableStringValueOf(getTransactionUniqueId());
     }
                       
-    public void setSendOrgCode(String sendOrgCode) {
-        this.sendOrgCode = sendOrgCode;
+    public void setTransactionUniqueId(String transactionUniqueId) {
+        this.transactionUniqueId = transactionUniqueId;
         _setFlag = true;
     }
 
-    public void setSendOrgCode(String sendOrgCode, boolean _masked) {
-        setSendOrgCode(sendOrgCode);
+    public void setTransactionUniqueId(String transactionUniqueId, boolean _masked) {
+        setTransactionUniqueId(transactionUniqueId);
     }
 
 
             
-    private String recvOrgCode = null;
+    private String userDeptCode = null;
     
-    public String getRecvOrgCode() {
-        return recvOrgCode;
+    public String getUserDeptCode() {
+        return userDeptCode;
     }
 
-    public String getRecvOrgCode(boolean _masked) {
-        return StringUtil.nullableStringValueOf(getRecvOrgCode());
+    public String getUserDeptCode(boolean _masked) {
+        return StringUtil.nullableStringValueOf(getUserDeptCode());
     }
                       
-    public void setRecvOrgCode(String recvOrgCode) {
-        this.recvOrgCode = recvOrgCode;
+    public void setUserDeptCode(String userDeptCode) {
+        this.userDeptCode = userDeptCode;
         _setFlag = true;
     }
 
-    public void setRecvOrgCode(String recvOrgCode, boolean _masked) {
-        setRecvOrgCode(recvOrgCode);
+    public void setUserDeptCode(String userDeptCode, boolean _masked) {
+        setUserDeptCode(userDeptCode);
     }
 
 
             
-    private String userId = null;
+    private String userName = null;
     
-    public String getUserId() {
-        return userId;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getUserId(boolean _masked) {
-        return StringUtil.nullableStringValueOf(getUserId());
+    public String getUserName(boolean _masked) {
+        return StringUtil.nullableStringValueOf(getUserName());
     }
                       
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserName(String userName) {
+        this.userName = userName;
         _setFlag = true;
     }
 
-    public void setUserId(String userId, boolean _masked) {
-        setUserId(userId);
+    public void setUserName(String userName, boolean _masked) {
+        setUserName(userName);
     }
 
 
@@ -165,12 +165,12 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
     }
     public void clone(proframe.dto.DataObject __commonHeader) {
         CommonHeader _commonHeader = (CommonHeader) __commonHeader;
-        _commonHeader.setTranCode(tranCode);
-        _commonHeader.setKindCode(kindCode);
-        _commonHeader.setOprCode(oprCode);
-        _commonHeader.setSendOrgCode(sendOrgCode);
-        _commonHeader.setRecvOrgCode(recvOrgCode);
-        _commonHeader.setUserId(userId);
+        _commonHeader.setServiceName(serviceName);
+        _commonHeader.setUseSystemCode(useSystemCode);
+        _commonHeader.setCertServerId(certServerId);
+        _commonHeader.setTransactionUniqueId(transactionUniqueId);
+        _commonHeader.setUserDeptCode(userDeptCode);
+        _commonHeader.setUserName(userName);
     }
     public String toString() {
         StringBuilder buffer = new StringBuilder();
@@ -184,12 +184,12 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
     
     private void toString_0(StringBuilder buffer) {
         int _size = 0; // field가 array인 경우 array size를 저장하는 변수
-            buffer.append("tranCode : ").append(tranCode).append("\n");
-            buffer.append("kindCode : ").append(kindCode).append("\n");
-            buffer.append("oprCode : ").append(oprCode).append("\n");
-            buffer.append("sendOrgCode : ").append(sendOrgCode).append("\n");
-            buffer.append("recvOrgCode : ").append(recvOrgCode).append("\n");
-            buffer.append("userId : ").append(userId).append("\n");
+            buffer.append("serviceName : ").append(serviceName).append("\n");
+            buffer.append("useSystemCode : ").append(useSystemCode).append("\n");
+            buffer.append("certServerId : ").append(certServerId).append("\n");
+            buffer.append("transactionUniqueId : ").append(transactionUniqueId).append("\n");
+            buffer.append("userDeptCode : ").append(userDeptCode).append("\n");
+            buffer.append("userName : ").append(userName).append("\n");
     }    
     public String toString(int limit) {
         StringBuilder buffer = new StringBuilder();
@@ -205,22 +205,22 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
     private void toString_0(StringBuilder buffer, int limit) {
         int _size = 0; // field가 array인 경우 array size를 저장하는 변수
         if(buffer.length() < limit) {
-            buffer.append("tranCode : ").append(tranCode).append("\n");
+            buffer.append("serviceName : ").append(serviceName).append("\n");
         }
         if(buffer.length() < limit) {
-            buffer.append("kindCode : ").append(kindCode).append("\n");
+            buffer.append("useSystemCode : ").append(useSystemCode).append("\n");
         }
         if(buffer.length() < limit) {
-            buffer.append("oprCode : ").append(oprCode).append("\n");
+            buffer.append("certServerId : ").append(certServerId).append("\n");
         }
         if(buffer.length() < limit) {
-            buffer.append("sendOrgCode : ").append(sendOrgCode).append("\n");
+            buffer.append("transactionUniqueId : ").append(transactionUniqueId).append("\n");
         }
         if(buffer.length() < limit) {
-            buffer.append("recvOrgCode : ").append(recvOrgCode).append("\n");
+            buffer.append("userDeptCode : ").append(userDeptCode).append("\n");
         }
         if(buffer.length() < limit) {
-            buffer.append("userId : ").append(userId).append("\n");
+            buffer.append("userName : ").append(userName).append("\n");
         }
     }    
     private static final Map fieldPropertyMap = null;
@@ -230,17 +230,17 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
         fieldPropertyMap = new java.util.LinkedHashMap( parentfieldPropertyMap.size() + 6);
         fieldPropertyMap.putAll( parentfieldPropertyMap );
 
-        fieldPropertyMap.put("tranCode"
+        fieldPropertyMap.put("serviceName"
                             , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
-        fieldPropertyMap.put("kindCode"
-                            , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_PRIMITIVE_LONG, -1, null, null));
-        fieldPropertyMap.put("oprCode"
-                            , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_PRIMITIVE_LONG, -1, null, null));
-        fieldPropertyMap.put("sendOrgCode"
+        fieldPropertyMap.put("useSystemCode"
                             , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
-        fieldPropertyMap.put("recvOrgCode"
+        fieldPropertyMap.put("certServerId"
                             , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
-        fieldPropertyMap.put("userId"
+        fieldPropertyMap.put("transactionUniqueId"
+                            , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
+        fieldPropertyMap.put("userDeptCode"
+                            , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
+        fieldPropertyMap.put("userName"
                             , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_STRING, -1, null, null));
     }*/
     
@@ -254,12 +254,12 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
     private static final List<String> fieldNameList = new ArrayList<String>(6);
     
     static {        
-        fieldNameList.add("tranCode");
-        fieldNameList.add("kindCode");
-        fieldNameList.add("oprCode");
-        fieldNameList.add("sendOrgCode");
-        fieldNameList.add("recvOrgCode");
-        fieldNameList.add("userId");
+        fieldNameList.add("serviceName");
+        fieldNameList.add("useSystemCode");
+        fieldNameList.add("certServerId");
+        fieldNameList.add("transactionUniqueId");
+        fieldNameList.add("userDeptCode");
+        fieldNameList.add("userName");
     }
     
     public List<String> getFieldNameList(){
@@ -274,12 +274,12 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
         int hashCode = fieldName.hashCode();
         
         switch(hashCode) {
-            case 1279461304 : return getTranCode();
-            case -555584607 : return Long.valueOf(getKindCode());
-            case -1252454338 : return Long.valueOf(getOprCode());
-            case -1468826039 : return getSendOrgCode();
-            case 41102891 : return getRecvOrgCode();
-            case -836030906 : return getUserId();
+            case -1928572192 : return getServiceName();
+            case -771389021 : return getUseSystemCode();
+            case 95550978 : return getCertServerId();
+            case -2007736886 : return getTransactionUniqueId();
+            case 178703037 : return getUserDeptCode();
+            case -266666762 : return getUserName();
             default : return null;
         }
     }
@@ -287,22 +287,22 @@ public class CommonHeader extends ProMapperDataObject implements ResourceMeta {
         int hashCode = fieldName.hashCode();
         
         switch(hashCode) {
-            case 1279461304 : setTranCode((String)arg);break;
-            case -555584607 : setKindCode(((Long)arg).longValue());break;
-            case -1252454338 : setOprCode(((Long)arg).longValue());break;
-            case -1468826039 : setSendOrgCode((String)arg);break;
-            case 41102891 : setRecvOrgCode((String)arg);break;
-            case -836030906 : setUserId((String)arg);break;
+            case -1928572192 : setServiceName((String)arg);break;
+            case -771389021 : setUseSystemCode((String)arg);break;
+            case 95550978 : setCertServerId((String)arg);break;
+            case -2007736886 : setTransactionUniqueId((String)arg);break;
+            case 178703037 : setUserDeptCode((String)arg);break;
+            case -266666762 : setUserName((String)arg);break;
             default : return;
         }
     }
     public boolean isEmptyDataObjectMethod(){ 
-        if (tranCode != null) return false;
-        if(true) return false;
-        if(true) return false;
-        if (sendOrgCode != null) return false;
-        if (recvOrgCode != null) return false;
-        if (userId != null) return false;
+        if (serviceName != null) return false;
+        if (useSystemCode != null) return false;
+        if (certServerId != null) return false;
+        if (transactionUniqueId != null) return false;
+        if (userDeptCode != null) return false;
+        if (userName != null) return false;
 
         return true;
     }

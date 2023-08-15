@@ -4,7 +4,7 @@
    <ns0:id>mem</ns0:id>
    <ns0:name>[MEM] 회원사</ns0:name>
    <ns0:package>hwgi.o28</ns0:package>
-   <ns0:version>1</ns0:version>
+   <ns0:version>3</ns0:version>
    <ns0:resourceType>BizNode</ns0:resourceType>
    <ns0:parentId>hwgi.o28</ns0:parentId>
    <ns0:order>0</ns0:order>
@@ -15,16 +15,6 @@
    <ns0:dedication>Parent</ns0:dedication>
    <ns0:dupCheck>No</ns0:dupCheck>
    <ns0:hasResponse>Parent</ns0:hasResponse>
-   <ns0:requestMessage>
-      <ns0:messageId>hwgi.o28.mem:CommonHeader.umsg</ns0:messageId>
-      <ns0:typeId>hwgi.o28.mem:CommonHeaderXML.msg</ns0:typeId>
-      <ns0:isArray>false</ns0:isArray>
-   </ns0:requestMessage>
-   <ns0:responseMessage>
-      <ns0:messageId>hwgi.o28.mem:CommonHeader.umsg</ns0:messageId>
-      <ns0:typeId>hwgi.o28.mem:CommonHeaderXML.msg</ns0:typeId>
-      <ns0:isArray>false</ns0:isArray>
-   </ns0:responseMessage>
    <ns0:useErrorHandle>true</ns0:useErrorHandle>
    <ns0:errorHandle>
       <ns0:errorResponseMethodType>Parent</ns0:errorResponseMethodType>

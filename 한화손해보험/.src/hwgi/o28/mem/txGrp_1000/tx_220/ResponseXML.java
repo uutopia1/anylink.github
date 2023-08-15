@@ -2,7 +2,7 @@
  * 작성된 날짜: Aug 15, 2023
  * Copyright (c) 2023 TmaxSoft co., Ltd. All rights reserved.
  */
-package hwgi.o28.mem;
+package hwgi.o28.mem.txGrp_1000.tx_220;
 
 import com.tmax.promapper.engine.base.ProMapperDataObject;
 import proframe.dto.DataObject;
@@ -36,7 +36,7 @@ import java.math.BigDecimal;
 import com.tmax.promapper.engine.base.XMLMessage;
 
 /**
- * @file              hwgi.o28.mem.CommonHeaderXML.java
+ * @file              hwgi.o28.mem.txGrp_1000.tx_220.ResponseXML.java
  * @filetype          java source file
  * @brief            
  * @version           1.0
@@ -50,15 +50,15 @@ import com.tmax.promapper.engine.base.XMLMessage;
 
 
 
-public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage implements ResourceMeta {
+public class ResponseXML extends com.tmax.promapper.engine.base.XMLMessage implements ResourceMeta {
     private static Logger logger = Logger.getLogger(XMLMessage.class.getName()); 
     
     private Boolean isRPCEncoded = new Boolean(false);
     
-    private static final QName messageElementName = new QName("commonHeader");
+    private static final QName messageElementName = new QName("response");
 
     
-    private static final QName complexTypeName = new QName("commonHeader");
+    private static final QName complexTypeName = new QName("response");
 
     
     public QName getMessageElementName() {
@@ -78,15 +78,15 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     
     private String currentNameSpaceURI = null;
     
-    public CommonHeaderXML() {
+    public ResponseXML() {
         super();
     }
 
-    public CommonHeaderXML(int conversionType) {
+    public ResponseXML(int conversionType) {
         super(conversionType);
     }
 
-    public CommonHeaderXML(String charsetName) {
+    public ResponseXML(String charsetName) {
         super(charsetName);
     }
     
@@ -103,9 +103,9 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         ByteArrayOutputStream bout = new ByteArrayOutputStream();
         XMLStreamWriter writer = XMLUtil.createXMLStreamWriter(this, writeXMLProcessingInstruction, bout, selfCloseFlag);
         
-        hwgi.o28.mem.CommonHeader  _commonHeaderXML = (hwgi.o28.mem.CommonHeader)obj;
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  _responseXML = (hwgi.o28.mem.txGrp_1000.tx_220.Response)obj;
         
-        marshalObject(_commonHeaderXML, writer, messageElementName);
+        marshalObject(_responseXML, writer, messageElementName);
         
         writer.writeEndDocument();
         writer.flush();
@@ -119,7 +119,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     }
     
     public void marshalObject(Object dataObject, XMLStreamWriter writer, QName rootElementName) throws Exception {
-        hwgi.o28.mem.CommonHeader _commonHeaderXML = (hwgi.o28.mem.CommonHeader)dataObject;
+        hwgi.o28.mem.txGrp_1000.tx_220.Response _responseXML = (hwgi.o28.mem.txGrp_1000.tx_220.Response)dataObject;
         XMLUtil.writeStartElementAndNamspaceDeclaration(rootElementName, writer, nsMap, null);
         
         if(nsMap != null){
@@ -129,7 +129,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         	}
         }
         
-        marshalXmlBody(_commonHeaderXML, writer);
+        marshalXmlBody(_responseXML, writer);
         
         writer.writeEndElement();//endElement for rootElement
     }
@@ -139,7 +139,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
      *
      */
     public void marshalObject(Object dataObject, XMLStreamWriter writer, QName rootElementName, Boolean isRPCEncoded) throws Exception {
-        hwgi.o28.mem.CommonHeader _commonHeaderXML = (hwgi.o28.mem.CommonHeader)dataObject;
+        hwgi.o28.mem.txGrp_1000.tx_220.Response _responseXML = (hwgi.o28.mem.txGrp_1000.tx_220.Response)dataObject;
         XMLUtil.writeStartElementAndNamspaceDeclaration(rootElementName, writer, nsMap, null);
         this.isRPCEncoded = isRPCEncoded;
         
@@ -150,7 +150,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         	}
         }
         
-        marshalXmlBody(_commonHeaderXML, writer);
+        marshalXmlBody(_responseXML, writer);
         
         writer.writeEndElement();//endElement for rootElement
     }
@@ -159,18 +159,18 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
      * messageField들을 위한 startElement, elementContent, endElement를 찍는다.
      *
      */
-    public void marshalXmlBody(hwgi.o28.mem.CommonHeader _commonHeaderXML, XMLStreamWriter writer) throws javax.xml.stream.XMLStreamException, com.tmax.promapper.engine.exception.MarshallException {
+    public void marshalXmlBody(hwgi.o28.mem.txGrp_1000.tx_220.Response _responseXML, XMLStreamWriter writer) throws javax.xml.stream.XMLStreamException, com.tmax.promapper.engine.exception.MarshallException {
     
-        marshalXmlBody_0(_commonHeaderXML, writer);
+        marshalXmlBody_0(_responseXML, writer);
     }
     
-    private void marshalXmlBody_0(hwgi.o28.mem.CommonHeader _commonHeaderXML, XMLStreamWriter writer) throws javax.xml.stream.XMLStreamException, com.tmax.promapper.engine.exception.MarshallException {
+    private void marshalXmlBody_0(hwgi.o28.mem.txGrp_1000.tx_220.Response _responseXML, XMLStreamWriter writer) throws javax.xml.stream.XMLStreamException, com.tmax.promapper.engine.exception.MarshallException {
         char[] c = null;
         
             
-            //element field name is serviceName. nillable="false", minOccurs="1"
-        if(_commonHeaderXML.getServiceName() == null) {
-            writer.writeStartElement("serviceName");
+            //element field name is ifid. nillable="false", minOccurs="1"
+        if(_responseXML.getIfid() == null) {
+            writer.writeStartElement("ifid");
             if (isRPCEncoded) {
                 writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
                 writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
@@ -178,120 +178,108 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
             }
             writer.writeEndElement();
         } else {
-            writer.writeStartElement("serviceName");
+            writer.writeStartElement("ifid");
             if (isRPCEncoded) {
                 writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
                 writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
                 writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
             }
-            if(!_commonHeaderXML.getServiceName(this.masked).equals("")) {
-					writer.writeCharacters(_commonHeaderXML.getServiceName(this.masked));
+            if(!_responseXML.getIfid(this.masked).equals("")) {
+					writer.writeCharacters(_responseXML.getIfid(this.masked));
 			}
             writer.writeEndElement();
         }
-            //element field name is useSystemCode. nillable="false", minOccurs="1"
-        if(_commonHeaderXML.getUseSystemCode() == null) {
-            writer.writeStartElement("useSystemCode");
+            //element field name is requestDate. nillable="false", minOccurs="1"
+        if(_responseXML.getRequestDate() == null) {
+            writer.writeStartElement("requestDate");
+            if (isRPCEncoded) {
+                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
+                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
+                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+            }
+            writer.writeEndElement();
+        } else {
+            writer.writeStartElement("requestDate");
+            if (isRPCEncoded) {
+                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
+                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
+                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+            }
+            if(!_responseXML.getRequestDate(this.masked).equals("")) {
+					writer.writeCharacters(_responseXML.getRequestDate(this.masked));
+			}
+            writer.writeEndElement();
+        }
+            //element field name is requestNo. nillable="false", minOccurs="1"
+        if(_responseXML.getRequestNo() == null) {
+            writer.writeStartElement("requestNo");
+            if (isRPCEncoded) {
+                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
+                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
+                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+            }
+            writer.writeEndElement();
+        } else {
+            writer.writeStartElement("requestNo");
+            if (isRPCEncoded) {
+                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
+                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
+                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+            }
+            if(!_responseXML.getRequestNo(this.masked).equals("")) {
+					writer.writeCharacters(_responseXML.getRequestNo(this.masked));
+			}
+            writer.writeEndElement();
+        }
+            //element field name is systemId. nillable="false", minOccurs="1"
+        if(_responseXML.getSystemId() == null) {
+            writer.writeStartElement("systemId");
+            if (isRPCEncoded) {
+                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
+                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
+                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+            }
+            writer.writeEndElement();
+        } else {
+            writer.writeStartElement("systemId");
+            if (isRPCEncoded) {
+                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
+                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
+                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+            }
+            if(!_responseXML.getSystemId(this.masked).equals("")) {
+					writer.writeCharacters(_responseXML.getSystemId(this.masked));
+			}
+            writer.writeEndElement();
+        }
+            //element field name is resultCode. nillable="false", minOccurs="1"
+        //primitive type
+            writer.writeStartElement("resultCode");
             if (isRPCEncoded) {
                 writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:long");
                 writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
                 writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
             }
-            writer.writeEndElement();
+        writer.writeCharacters(Long.toString(_responseXML.getResultCode()));
+        writer.writeEndElement();
+            //element field name is body. nillable="false", minOccurs="0"
+        if(!XMLUtil.isDataObjectValueSet(_responseXML.getBody())) {
+            //Nothing to do. minOccurs ==0
         } else {
-            writer.writeStartElement("useSystemCode");
+            writer.writeStartElement("body");
             if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:long");
+                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "body");
                 writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+                writer.writeNamespace("body", "");
             }
-            if(!_commonHeaderXML.getUseSystemCode(this.masked).equals("")) {
-					writer.writeCharacters(_commonHeaderXML.getUseSystemCode(this.masked));
-			}
-            writer.writeEndElement();
-        }
-            //element field name is certServerId. nillable="false", minOccurs="1"
-        if(_commonHeaderXML.getCertServerId() == null) {
-            writer.writeStartElement("certServerId");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:long");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
+            hwgi.o28.mem.txGrp_1000.tx_220.BodyXML bodyMessage = new hwgi.o28.mem.txGrp_1000.tx_220.BodyXML();
+            bodyMessage.setIsRPCEncoded(isRPCEncoded);
+            bodyMessage.setMasked(this.masked);
+            if(currentNameSpaceURI != null && currentPrefix != null) {
+                bodyMessage.saveCurrentNameSpace(currentNameSpaceURI, currentPrefix);
             }
-            writer.writeEndElement();
-        } else {
-            writer.writeStartElement("certServerId");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:long");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
-            }
-            if(!_commonHeaderXML.getCertServerId(this.masked).equals("")) {
-					writer.writeCharacters(_commonHeaderXML.getCertServerId(this.masked));
-			}
-            writer.writeEndElement();
-        }
-            //element field name is transactionUniqueId. nillable="false", minOccurs="1"
-        if(_commonHeaderXML.getTransactionUniqueId() == null) {
-            writer.writeStartElement("transactionUniqueId");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
-            }
-            writer.writeEndElement();
-        } else {
-            writer.writeStartElement("transactionUniqueId");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
-            }
-            if(!_commonHeaderXML.getTransactionUniqueId(this.masked).equals("")) {
-					writer.writeCharacters(_commonHeaderXML.getTransactionUniqueId(this.masked));
-			}
-            writer.writeEndElement();
-        }
-            //element field name is userDeptCode. nillable="false", minOccurs="1"
-        if(_commonHeaderXML.getUserDeptCode() == null) {
-            writer.writeStartElement("userDeptCode");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
-            }
-            writer.writeEndElement();
-        } else {
-            writer.writeStartElement("userDeptCode");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
-            }
-            if(!_commonHeaderXML.getUserDeptCode(this.masked).equals("")) {
-					writer.writeCharacters(_commonHeaderXML.getUserDeptCode(this.masked));
-			}
-            writer.writeEndElement();
-        }
-            //element field name is userName. nillable="false", minOccurs="1"
-        if(_commonHeaderXML.getUserName() == null) {
-            writer.writeStartElement("userName");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
-            }
-            writer.writeEndElement();
-        } else {
-            writer.writeStartElement("userName");
-            if (isRPCEncoded) {
-                writer.writeAttribute(PREFIX_XSI, NS_XSI, "type", "xs:string");
-                writer.writeNamespace(PREFIX_SOAP_ENC, URI_NS_SOAP_ENC);
-                writer.writeNamespace("xs", "http://www.w3.org/2001/XMLSchema");
-            }
-            if(!_commonHeaderXML.getUserName(this.masked).equals("")) {
-					writer.writeCharacters(_commonHeaderXML.getUserName(this.masked));
-			}
+				bodyMessage.marshalXmlBody(_responseXML.getBody(), writer);
+            
             writer.writeEndElement();
         }
     }
@@ -328,8 +316,8 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         }
         
         //writer.writeNamespace("xsi", "http://www.w3.org/2001/XMLSchema-instance");
-        hwgi.o28.mem.CommonHeader _commonHeaderXML = (hwgi.o28.mem.CommonHeader)obj;
-        marshalXmlBody(_commonHeaderXML, writer);  
+        hwgi.o28.mem.txGrp_1000.tx_220.Response _responseXML = (hwgi.o28.mem.txGrp_1000.tx_220.Response)obj;
+        marshalXmlBody(_responseXML, writer);  
         //writer.writeEndDocument();
         writer.flush();
         writer.close();
@@ -347,7 +335,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         ByteArrayOutputStream bout = new ByteArrayOutputStream();
         XMLStreamWriter writer = XMLUtil.createXMLStreamWriter(this, writeXMLProcessingInstruction, bout, selfCloseFlag);
         
-        hwgi.o28.mem.CommonHeader  _commonHeaderXML = (hwgi.o28.mem.CommonHeader)obj;
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  _responseXML = (hwgi.o28.mem.txGrp_1000.tx_220.Response)obj;
         
         int startElementCountByXPath = 0;
         if(xPathExpression != null) {
@@ -355,7 +343,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
             startElementCountByXPath = xPathProc.writeElements(writer);
         }
         
-        marshalXmlBody(_commonHeaderXML, writer);
+        marshalXmlBody(_responseXML, writer);
         
         for(int i = 0; i < startElementCountByXPath; i++) {
             writer.writeEndElement();
@@ -368,8 +356,8 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     }
     
     public void marshalObjectExceptRootElement(Object obj, XMLStreamWriter writer) throws Exception {
-        hwgi.o28.mem.CommonHeader  _commonHeaderXML = (hwgi.o28.mem.CommonHeader)obj;
-        marshalXmlBody(_commonHeaderXML, writer);
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  _responseXML = (hwgi.o28.mem.txGrp_1000.tx_220.Response)obj;
+        marshalXmlBody(_responseXML, writer);
     }
         /*all hashmaps declared below have (String dtoFieldName, Integer caseInt) pairs.
            These will be used to determine which setter method in Dto will be invoked.         
@@ -382,17 +370,17 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         
         static{
                     //element
-            simpleTypeFieldMap.put(new QName("", "serviceName"), 0);
+            simpleTypeFieldMap.put(new QName("", "ifid"), 0);
                     //element
-            simpleTypeFieldMap.put(new QName("", "useSystemCode"), 1);
+            simpleTypeFieldMap.put(new QName("", "requestDate"), 1);
                     //element
-            simpleTypeFieldMap.put(new QName("", "certServerId"), 2);
+            simpleTypeFieldMap.put(new QName("", "requestNo"), 2);
                     //element
-            simpleTypeFieldMap.put(new QName("", "transactionUniqueId"), 3);
+            simpleTypeFieldMap.put(new QName("", "systemId"), 3);
                     //element
-            simpleTypeFieldMap.put(new QName("", "userDeptCode"), 4);
-                    //element
-            simpleTypeFieldMap.put(new QName("", "userName"), 5);
+            simpleTypeFieldMap.put(new QName("", "resultCode"), 4);
+                    //include
+            complexTypeFieldMap.put(new QName("", "body"), 5);
             //simpleTypeFieldMap.put(XMLMessage.nil, 6);
             //simpleTypeFieldMap.put(XMLMessage.schemaLocation, 7);
             //simpleTypeFieldMap.put(XMLMessage.noNamespaceSchemaLocation, 8);
@@ -405,7 +393,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         public static Map<QName, Integer> getSimpleTypeFieldMap() {
             return simpleTypeFieldMap;
         }
-        public void setSimpleTypeField(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.CommonHeader _argStructure) throws  UnmarshallException, javax.xml.stream.XMLStreamException, Exception {
+        public void setSimpleTypeField(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.txGrp_1000.tx_220.Response _argStructure) throws  UnmarshallException, javax.xml.stream.XMLStreamException, Exception {
             String value = _argReader.getElementText();
         
             if(logger.isLoggable(Level.FINEST)) {
@@ -417,28 +405,25 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
                 
         }
     
-        public void setSimpleTypeField_0(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.CommonHeader _argStructure, String value) throws  UnmarshallException, javax.xml.stream.XMLStreamException, Exception {
+        public void setSimpleTypeField_0(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.txGrp_1000.tx_220.Response _argStructure, String value) throws  UnmarshallException, javax.xml.stream.XMLStreamException, Exception {
                       
             try{
                 switch(_argFieldIndex) {
             
                 case 0:
-                    _argStructure.setServiceName(value, this.masked);
+                    _argStructure.setIfid(value, this.masked);
                     break;
                 case 1:
-                    _argStructure.setUseSystemCode(value, this.masked);
+                    _argStructure.setRequestDate(value, this.masked);
                     break;
                 case 2:
-                    _argStructure.setCertServerId(value, this.masked);
+                    _argStructure.setRequestNo(value, this.masked);
                     break;
                 case 3:
-                    _argStructure.setTransactionUniqueId(value, this.masked);
+                    _argStructure.setSystemId(value, this.masked);
                     break;
                 case 4:
-                    _argStructure.setUserDeptCode(value, this.masked);
-                    break;
-                case 5:
-                    _argStructure.setUserName(value, this.masked);
+                    _argStructure.setResultCode(value == null || value.length() == 0 ? 0 : Long.parseLong(value));
                     break;
                 default:
                     if (this.ignoreUnknownFields) {
@@ -458,12 +443,21 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     /** 
      * 포함하고있는 elementName이 오면 set후 return true; otherwise return false;
      */
-    public void setComplexTypeField(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.CommonHeader _argStructure) throws Exception{
+    public void setComplexTypeField(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.txGrp_1000.tx_220.Response _argStructure) throws Exception{
         boolean isNil = false;
         if(customHandlerFieldMap.get(_argElementName) != null) {
             setCustomHandlerField(_argElementName, customHandlerFieldMap.get(_argElementName), _argReader, _argStructure);    
         }    else {
             switch(_argFieldIndex) {
+            case 5:
+                hwgi.o28.mem.txGrp_1000.tx_220.BodyXML _body = new hwgi.o28.mem.txGrp_1000.tx_220.BodyXML();
+                hwgi.o28.mem.txGrp_1000.tx_220.Body body_struct = new hwgi.o28.mem.txGrp_1000.tx_220.Body();
+                {
+							isNil = _body.unmarshalObject(_argReader, body_struct, _argElementName);
+                    _argStructure.setBody(body_struct);
+                    //_argReader.nextTag();//move out from EndElement to next child element.
+                }
+                break;
             default:
                 if (this.ignoreUnknownFields) {
                     logger.warning("cannot find structureField corresponding to element named, " + _argElementName.toString());
@@ -476,7 +470,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     }
     
     /*rootElement의 attribute가 된 field들을 처리*/
-    public void setAttributeField(QName attrName, String attrValue, hwgi.o28.mem.CommonHeader _argStructure) throws  UnmarshallException {
+    public void setAttributeField(QName attrName, String attrValue, hwgi.o28.mem.txGrp_1000.tx_220.Response _argStructure) throws  UnmarshallException {
         Integer fieldIndex = (Integer)attributeFieldMap.get(attrName);
         
         if(fieldIndex == null) {
@@ -500,7 +494,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     }
     
     /* xsi: attribute를 처리하는 method , nil=true를 만나서 null로 set하는 경우 return true;*/
-    public boolean setAttribute(QName _argElementName, QName attrName, String value, hwgi.o28.mem.CommonHeader _argStructure) throws  UnmarshallException{
+    public boolean setAttribute(QName _argElementName, QName attrName, String value, hwgi.o28.mem.txGrp_1000.tx_220.Response _argStructure) throws  UnmarshallException{
         // xsi:nil처리
         if( attrName.equals(XMLMessage.nil)) {
             Integer fieldIndex = (Integer)nillableFieldMap.get(_argElementName);
@@ -519,7 +513,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         return false;
     }
     
-    public boolean setCustomHandlerField(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.CommonHeader _argStructure) throws Exception{
+    public boolean setCustomHandlerField(QName _argElementName, Integer _argFieldIndex, XMLStreamReader _argReader, hwgi.o28.mem.txGrp_1000.tx_220.Response _argStructure) throws Exception{
         switch(_argFieldIndex) {
         default:
             if (!this.ignoreUnknownFields) {
@@ -531,12 +525,12 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     }
     //return true 이면, caller가 object를 null로 set해야한다.
     public boolean unmarshalObject(XMLStreamReader reader, Object object) throws Exception {
-        return unmarshalObject(reader, object, new QName("","commonHeader"));
+        return unmarshalObject(reader, object, new QName("","response"));
     }
     
     //return true 이면, caller가 object를 null로 set해야한다. 
     public boolean unmarshalObject(XMLStreamReader reader, Object object, QName rootElement) throws Exception {
-        hwgi.o28.mem.CommonHeader  _commonHeaderXML = (hwgi.o28.mem.CommonHeader)object;
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  _responseXML = (hwgi.o28.mem.txGrp_1000.tx_220.Response)object;
         
         QName currentElem = null;
         int state = XMLMessage.INIT;
@@ -583,7 +577,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
                         } else if(attrNSURI.startsWith(XMLMessage.URI_NS_XMLSOAP)) {
                             //skip
                         } else {
-                            setAttributeField(attrName, attrValue, _commonHeaderXML);
+                            setAttributeField(attrName, attrValue, _responseXML);
                         }
                     }
                     afterRootElement = true;
@@ -598,7 +592,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
                             logger.finest("START_ELEMENT, [" + currentElem.toString() + "] attribute = [" + attrName.toString() + "], value = " + attrValue);
                         }
                         
-                        isCurrentElemNil = setAttribute(currentElem, attrName, attrValue, _commonHeaderXML);
+                        isCurrentElemNil = setAttribute(currentElem, attrName, attrValue, _responseXML);
                     }
                     
                     if(isCurrentElemNil) {
@@ -611,12 +605,12 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
                         }
                                                 
                         if(fieldIndex != null) {
-                            setComplexTypeField(currentElem, fieldIndex, reader, _commonHeaderXML);
+                            setComplexTypeField(currentElem, fieldIndex, reader, _responseXML);
                         } else {
                             fieldIndex = simpleTypeFieldMap.get(currentElem);
         
                             if(fieldIndex != null) {
-                                setSimpleTypeField(currentElem, fieldIndex, reader, _commonHeaderXML);
+                                setSimpleTypeField(currentElem, fieldIndex, reader, _responseXML);
                             } else {
                                 if (this.ignoreUnknownFields) {
                                     int next = reader.next();
@@ -668,7 +662,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         InputStream bin = new ByteArrayInputStream(msg,offset, msg.length-offset);
         XMLStreamReader reader = XMLUtil.createXMLStreamReader(bin);
         
-        hwgi.o28.mem.CommonHeader  struct = new hwgi.o28.mem.CommonHeader();
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  struct = new hwgi.o28.mem.txGrp_1000.tx_220.Response();
         boolean isNil = unmarshalObject(reader, struct);
         if(isNil) {
             struct = null;
@@ -700,7 +694,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     public Object unmarshalObject(Node message, QName rootElement) throws Exception {
         Source source = new DOMSource(message);
         XMLStreamReader reader = XMLUtil.createXMLStreamReader(source);
-        hwgi.o28.mem.CommonHeader  struct = new hwgi.o28.mem.CommonHeader();
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  struct = new hwgi.o28.mem.txGrp_1000.tx_220.Response();
         //unmarshalObject(reader, rootElement, struct);
         boolean isNil = unmarshalObject(reader, struct, rootElement);
         if(isNil) {
@@ -735,7 +729,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
         //xpath 처리하여 root element 뛰어 넘는 logic을 가진 api call.
         XPathProcessor xPathProc = new XPathProcessor(xPathExpression);
         xPathProc.passElements(reader);
-        hwgi.o28.mem.CommonHeader  struct = new hwgi.o28.mem.CommonHeader();
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  struct = new hwgi.o28.mem.txGrp_1000.tx_220.Response();
         boolean isNil = unmarshalObject(reader, struct, rootElement);
         if(isNil) {
             struct = null;
@@ -749,7 +743,7 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     }
     
     public Object unmarshalObjectExceptRootElement(XMLStreamReader reader) throws Exception{
-        hwgi.o28.mem.CommonHeader  struct = new hwgi.o28.mem.CommonHeader();
+        hwgi.o28.mem.txGrp_1000.tx_220.Response  struct = new hwgi.o28.mem.txGrp_1000.tx_220.Response();
         QName currentElementName = new QName(reader.getNamespaceURI(), reader.getLocalName());
         boolean isNil = unmarshalObject(reader, struct, currentElementName);
         
@@ -777,17 +771,17 @@ public class CommonHeaderXML extends com.tmax.promapper.engine.base.XMLMessage i
     public String getMetaData(String input) {
 
         if (input.equalsIgnoreCase(META_PHYSICAL_NAME)) {
-            return "CommonHeaderXML";
+            return "ResponseXML";
         } else if (input.equalsIgnoreCase(META_VERSION_NO)) {
             return null;
         } else if (input.equalsIgnoreCase(META_LOGICAL_NAME)) {
-            return "commonHeader";
+            return "response";
         } else if (input.equalsIgnoreCase(META_RESOURCE_ID)) {
-            return "hwgi.o28.mem:CommonHeaderXML.msg";
+            return "hwgi.o28.mem.txGrp_1000.tx_220:ResponseXML.msg";
         } else if (input.equalsIgnoreCase(META_RESOURCE_TYPE)) {
             return "MESSAGE";
         } else if (input.equalsIgnoreCase(META_RESOURCE_PATH)) {
-            return "hwgi.o28.mem";
+            return "hwgi.o28.mem.txGrp_1000.tx_220";
         } else if (input.equalsIgnoreCase(META_RESOURCE_GROUP)) {
             return null;
         } else if (input.equalsIgnoreCase(META_MESSAGE_TYPE)) {
