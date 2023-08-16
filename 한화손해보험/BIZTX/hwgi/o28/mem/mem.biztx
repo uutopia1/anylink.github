@@ -4,7 +4,7 @@
    <ns0:id>mem</ns0:id>
    <ns0:name>[MEM] 회원사</ns0:name>
    <ns0:package>hwgi.o28</ns0:package>
-   <ns0:version>4</ns0:version>
+   <ns0:version>5</ns0:version>
    <ns0:resourceType>BizNode</ns0:resourceType>
    <ns0:parentId>hwgi.o28</ns0:parentId>
    <ns0:order>0</ns0:order>
