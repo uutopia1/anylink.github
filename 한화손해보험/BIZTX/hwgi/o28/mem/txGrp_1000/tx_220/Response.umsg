@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure resourceType="STRUCTURE" logicalName="response" physicalName="Response" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:Response.umsg">
+    <str:structureField physicalName="ifid" logicalName="ifid" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="requestDate" logicalName="requestDate" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="requestNo" logicalName="requestNo" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="systemId" logicalName="systemId" fieldType="string" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="resultCode" logicalName="resultCode" fieldType="long" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:structureField physicalName="body" logicalName="body" fieldType="include" includeStructureName="Body" includeStructurePath="hwgi.o28.mem.txGrp_1000.tx_220" referenceId="hwgi.o28.mem.txGrp_1000.tx_220:Body.umsg" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:messageInfo messageId="hwgi.o28.mem.txGrp_1000.tx_220:ResponseXML.msg" messagePhysicalName="ResponseXML" messagePath="hwgi.o28.mem.txGrp_1000.tx_220" messageType="XML" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+    <str:messageInfo messagePath="hwgi.o28.mem.txGrp_1000.tx_220" messagePhysicalName="ResponseJSON" messageType="JSON" messageId="hwgi.o28.mem.txGrp_1000.tx_220:ResponseJSON.msg" xmlns:str="http://www.tmaxsoft.com/promapper/structure"/>
+  </mes:structure>
+  <mes:message resourceType="MESSAGE" messageType="XML" logicalName="response" physicalName="ResponseXML" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:ResponseXML.msg" elementName="response" complexTypeName="response" structurePath="hwgi.o28.mem.txGrp_1000.tx_220" structureName="Response" structureId="hwgi.o28.mem.txGrp_1000.tx_220:Response.umsg">
+    <mes:messageField maxOccurs="1" minOccurs="1" physicalName="ifid" logicalName="ifid" elementName="ifid" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <mes:messageField maxOccurs="1" minOccurs="1" physicalName="requestDate" logicalName="requestDate" elementName="requestDate" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <mes:messageField maxOccurs="1" minOccurs="1" physicalName="requestNo" logicalName="requestNo" elementName="requestNo" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <mes:messageField maxOccurs="1" minOccurs="1" physicalName="systemId" logicalName="systemId" elementName="systemId" isElement="true" nillable="false" typeName="xs:string" fieldType="string" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <mes:messageField maxOccurs="1" minOccurs="1" physicalName="resultCode" logicalName="resultCode" elementName="resultCode" isElement="true" nillable="false" typeName="xs:long" fieldType="long" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <mes:messageField maxOccurs="1" minOccurs="0" physicalName="body" logicalName="body" elementName="body" isElement="true" nillable="false" fieldType="include" includeMessageName="BodyXML" includeMessagePath="hwgi.o28.mem.txGrp_1000.tx_220" referenceId="hwgi.o28.mem.txGrp_1000.tx_220:BodyXML.msg" referenceStructureName="Body" typeName="body" includeNameSpace=""/>
+  </mes:message>
+  <mes:message physicalName="ResponseJSON" logicalName="response" structureId="hwgi.o28.mem.txGrp_1000.tx_220:Response.umsg" structureName="Response" structurePath="hwgi.o28.mem.txGrp_1000.tx_220" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceType="MESSAGE" resourceGroup="" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:ResponseJSON.msg" messageType="JSON" trimFlag="none" ignoreUnknownFields="false" nullValueAction="NULL" objectName="">
+    <mes:messageField physicalName="ifid" logicalName="ifid" fieldType="string" decimal="0" array="" comments="" encodeOption="Char" pattern="yyyy-MM-dd"/>
+    <mes:messageField physicalName="requestDate" logicalName="requestDate" fieldType="string" decimal="0" array="" comments="" encodeOption="Char" pattern="yyyy-MM-dd"/>
+    <mes:messageField physicalName="requestNo" logicalName="requestNo" fieldType="string" decimal="0" array="" comments="" encodeOption="Char" pattern="yyyy-MM-dd"/>
+    <mes:messageField physicalName="systemId" logicalName="systemId" fieldType="string" decimal="0" array="" comments="" encodeOption="Char" pattern="yyyy-MM-dd"/>
+    <mes:messageField physicalName="resultCode" logicalName="resultCode" fieldType="long" decimal="0" array="" comments="" encodeOption="Char" pattern="yyyy-MM-dd"/>
+    <mes:messageField physicalName="body" logicalName="body" fieldType="include" decimal="0" array="" comments="" encodeOption="Char" pattern="yyyy-MM-dd" referenceId="hwgi.o28.mem.txGrp_1000.tx_220:BodyJSON.msg" includeMessageName="BodyJSON" includeMessagePath="hwgi.o28.mem.txGrp_1000.tx_220" referenceStructureName="Body"/>
+  </mes:message>
+</mes:umessage>
