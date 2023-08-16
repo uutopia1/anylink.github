@@ -4,7 +4,7 @@
    <ns0:id>o28</ns0:id>
    <ns0:name>[O28] 건축물대장</ns0:name>
    <ns0:package>hwgi</ns0:package>
-   <ns0:version>3</ns0:version>
+   <ns0:version>4</ns0:version>
    <ns0:resourceType>BizNode</ns0:resourceType>
    <ns0:order>0</ns0:order>
    <ns0:nodeType>Root</ns0:nodeType>
