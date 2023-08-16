@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="BKNIA_Variables" physicalName="BKNIA_Variables" resourceGroup="" resourceId="hwgi.f54:BKNIA_Variables.umsg" resourcePath="hwgi.f54" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="전체파일크기(실제크기)" decimal="0" fieldType="BigInteger" keyword="" logicalName="개행포함 파일크기" physicalName="tot_file_size"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="파일크기(개행제외)" decimal="0" fieldType="BigInteger" keyword="" logicalName="개행제외 파일크기" physicalName="file_size"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="송수신 BYTE 크기(0600)" decimal="0" fieldType="integer" logicalName="송수신BYTE크기" physicalName="sr_byte_size"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="송신 BYTE 크기 (0320, 0310)" decimal="0" fieldType="integer" logicalName="실 데이터 BYTE 크기" physicalName="send_byte_size"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="전체 블록 개수" decimal="0" fieldType="integer" keyword="" logicalName="전체 블록 개수" physicalName="tot_blk_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="전체 시퀀스 개수" decimal="0" fieldType="integer" keyword="" logicalName="전체 시퀀스 개수" physicalName="tot_seq_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="전체 레코드 개수" decimal="0" fieldType="integer" keyword="" logicalName="전체 레코드 개수" physicalName="tot_record_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="현재 블록 번호" decimal="0" fieldType="integer" keyword="" logicalName="현재 블록 번호" physicalName="cur_blk_no"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="블럭 내에서 현재 시퀀스 번호" decimal="0" fieldType="integer" keyword="" logicalName="현재 시퀀스 번호" physicalName="cur_seq_no"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="송수신한 블록 개수" decimal="0" fieldType="integer" keyword="" logicalName="송수신한 블록 개수" physicalName="tot_sr_blk_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="송수신한 시퀀스 개수" decimal="0" fieldType="integer" keyword="" logicalName="송수신한 시퀀스 개수" physicalName="tot_sr_seq_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="송수신한 레코드 개수" decimal="0" fieldType="integer" keyword="" logicalName="송수신한 레코드 개수" physicalName="tot_sr_record_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="남은 블록 개수" decimal="0" fieldType="integer" keyword="" logicalName="남은 블록 개수" physicalName="remain_blk_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="남은 시퀀스 개수" decimal="0" fieldType="integer" keyword="" logicalName="남은 시퀀스 개수" physicalName="remain_seq_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="남은 레코드 개수" decimal="0" fieldType="integer" keyword="" logicalName="남은 레코드 개수" physicalName="remain_record_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="결번 개수" decimal="0" fieldType="integer" keyword="" logicalName="결번 개수" physicalName="skip_seq_cnt"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="금결원_일괄전송 개별업무종료시 송신집계내역" decimal="0" fieldType="string" logicalName="개별업무종료송신내역" physicalName="sendHist_003"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" comments="금결원_일괄전송 전체업무종료시 송신집계내역" decimal="0" fieldType="string" logicalName="전업무종료송신내역" physicalName="sendHist_004"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="세션키" physicalName="session_key"/>
+  </mes:structure>
+</mes:umessage>

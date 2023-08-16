@@ -1,5 +1,5 @@
 /*
- * 작성된 날짜: Aug 14, 2023
+ * 작성된 날짜: Aug 16, 2023
  * Copyright (c) 2023 TmaxSoft co., Ltd. All rights reserved.
  */
 package hwgi.f54;
@@ -28,7 +28,7 @@ import com.tmax.promapper.engine.base.FixedLengthMessage;
  * @history
  * 성 명              일 자                     근 거 자 료                      변 경 내 용
  * -----------        --------                  --------------                   --------------------------    
- * AnyLink :       Aug 14, 2023                AnyLink 개발 :                신규 작성
+ * AnyLink :       Aug 16, 2023                AnyLink 개발 :                신규 작성
  * 
  */
 

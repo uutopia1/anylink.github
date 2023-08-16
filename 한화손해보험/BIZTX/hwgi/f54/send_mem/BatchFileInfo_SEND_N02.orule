@@ -6,12 +6,12 @@
    <ns0:version>0</ns0:version>
    <ns0:resourceType>OutboundRule</ns0:resourceType>
    <ns0:requestMessage>
-      <ns0:messageId>hwgi.f54:BKNIA_BAT_REQ.umsg</ns0:messageId>
+      <ns0:messageId>sonbo.f54:BKNIA_BAT_REQ.umsg</ns0:messageId>
       <ns0:typeId>Default Type</ns0:typeId>
       <ns0:isArray>false</ns0:isArray>
    </ns0:requestMessage>
    <ns0:responseMessage>
-      <ns0:messageId>hwgi.f54:BKNIA_BAT_RES.umsg</ns0:messageId>
+      <ns0:messageId>sonbo.f54:BKNIA_BAT_RES.umsg</ns0:messageId>
       <ns0:typeId>Default Type</ns0:typeId>
       <ns0:isArray>false</ns0:isArray>
    </ns0:responseMessage>

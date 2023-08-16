@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="BKNIA_BAT_REQ" physicalName="BKNIA_BAT_REQ" resourceGroup="" resourceId="hwgi.f54:BKNIA_BAT_REQ.umsg" resourcePath="hwgi.f54" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="ORG_CODE" physicalName="ORG_CODE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILE_CODE" physicalName="FILE_CODE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="TX_DATE" physicalName="TX_DATE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILLER" physicalName="FILLER"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILLER1" physicalName="FILLER1"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILLER2" physicalName="FILLER2"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILLER3" physicalName="FILLER3"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILLER4" physicalName="FILLER4"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILLER5" physicalName="FILLER5"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILLER6" physicalName="FILLER6"/>
+  </mes:structure>
+</mes:umessage>

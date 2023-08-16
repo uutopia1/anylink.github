@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ns0:outboundRuleInfo xmlns:ns0="http://www.tmaxsoft.com/schemas/anylink/" xmlns:ns1="http://www.tmaxsoft.com/schemas/anylink/common/" xmlns:ns2="http://www.tmaxsoft.com/schemas/anylink/reliableQueue/" xmlns:ns3="http://www.tmaxsoft.com/schemas/anylink/serverPlugin/">
+   <ns0:sysId>hwgi.f54.send_mem.mem:BKNIA_TCP_6010_001.orule</ns0:sysId>
+   <ns0:id>BKNIA_TCP_6010_001</ns0:id>
+   <ns0:name>BKNIA_TCP_6010_001_개시응답</ns0:name>
+   <ns0:package>hwgi.f54.send_mem.mem</ns0:package>
+   <ns0:version>0</ns0:version>
+   <ns0:resourceType>OutboundRule</ns0:resourceType>
+   <ns0:requestMessage>
+      <ns0:messageId>sonbo.f54:FT_54PP_0000_000_DH0.umsg</ns0:messageId>
+      <ns0:typeId>sonbo.f54:FT_54PP_0000_000_DH0FixedLength.msg</ns0:typeId>
+      <ns0:isArray>false</ns0:isArray>
+   </ns0:requestMessage>
+   <ns0:requestMessage>
+      <ns0:messageId>sonbo.f54:FT_54PP_6000_00X_DB0.umsg</ns0:messageId>
+      <ns0:typeId>sonbo.f54:FT_54PP_6000_00X_DB0FixedLength.msg</ns0:typeId>
+      <ns0:isArray>false</ns0:isArray>
+   </ns0:requestMessage>
+   <ns0:useResponseHeaderMessage>false</ns0:useResponseHeaderMessage>
+   <ns0:adapterId>F54_TCP</ns0:adapterId>
+   <ns0:endpointId>F54_TCP.EPG_MEM</ns0:endpointId>
+   <ns0:requestTimeout>10000</ns0:requestTimeout>
+   <ns0:protocol>TCP</ns0:protocol>
+   <ns0:tcpOutboundRuleInfo>
+      <ns0:callType>Oneway</ns0:callType>
+      <ns0:retryNum>0</ns0:retryNum>
+   </ns0:tcpOutboundRuleInfo>
+</ns0:outboundRuleInfo>

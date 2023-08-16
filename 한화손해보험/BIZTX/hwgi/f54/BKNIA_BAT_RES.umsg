@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceGroup="" resourceId="hwgi.f54:BKNIA_BAT_RES.umsg" resourcePath="hwgi.f54" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILE_CODE" physicalName="FILE_CODE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILE_PATH" physicalName="FILE_PATH"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="SUCCESS_FILE_PATH" physicalName="SUCCESS_FILE_PATH"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FAILURE_FILE_PATH" physicalName="FAILURE_FILE_PATH"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="FILE_NAME" physicalName="FILE_NAME"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="TRANSACTION_CODE" physicalName="TRANSACTION_CODE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="SYSTEM_ID" physicalName="SYSTEM_ID"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="BANK_CODE" physicalName="BANK_CODE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="BANK_NAME" physicalName="BANK_NAME"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="SEND_USERID" physicalName="SEND_USERID"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="SEND_USER_PSWD" physicalName="SEND_USER_PSWD"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="int" logicalName="HEADER_SIZE" physicalName="HEADER_SIZE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="int" logicalName="PACKET_SIZE" physicalName="PACKET_SIZE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="int" logicalName="SKIP_COUNT" physicalName="SKIP_COUNT"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="int" logicalName="RECORD_SIZE" physicalName="RECORD_SIZE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="int" logicalName="RECORD_COUNT" physicalName="RECORD_COUNT"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="LINEFEED" physicalName="LINEFEED"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="TX_DATE" physicalName="TX_DATE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="DIFF_DATE" physicalName="DIFF_DATE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="DUP_RECV_FLAG" physicalName="DUP_RECV_FLAG"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="BIZ_CODE" physicalName="BIZ_CODE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="AFTER_ACTION_ID" physicalName="AFTER_ACTION_ID"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="int" logicalName="FILE_COUNT" physicalName="FILE_COUNT"/>
+  </mes:structure>
+</mes:umessage>

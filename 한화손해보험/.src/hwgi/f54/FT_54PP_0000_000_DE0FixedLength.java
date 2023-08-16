@@ -20,7 +20,7 @@ import com.tmax.promapper.engine.util.FixedLengthUnmarshalField;
 import com.tmax.promapper.engine.base.FixedLengthMessage;
 
 /**
- * @file              hwgi.f54.BKNIA_FILE_BLOCKFixedLength.java
+ * @file              hwgi.f54.FT_54PP_0000_000_DE0FixedLength.java
  * @filetype          java source file
  * @brief            
  * @version           1.0
@@ -34,17 +34,17 @@ import com.tmax.promapper.engine.base.FixedLengthMessage;
 
 
 
-public class BKNIA_FILE_BLOCKFixedLength extends com.tmax.promapper.engine.base.FixedLengthMessage implements ResourceMeta {
+public class FT_54PP_0000_000_DE0FixedLength extends com.tmax.promapper.engine.base.FixedLengthMessage implements ResourceMeta {
 
-    public BKNIA_FILE_BLOCKFixedLength() {
-            super(com.tmax.promapper.engine.util.Constants.EUC_KR);
+    public FT_54PP_0000_000_DE0FixedLength() {
+        super();
     }
 
-    public BKNIA_FILE_BLOCKFixedLength(int conversionType) {
+    public FT_54PP_0000_000_DE0FixedLength(int conversionType) {
         super(conversionType);
     }
 
-    public BKNIA_FILE_BLOCKFixedLength(String charsetName) {
+    public FT_54PP_0000_000_DE0FixedLength(String charsetName) {
         super(charsetName);
     }
     
@@ -55,30 +55,14 @@ public class BKNIA_FILE_BLOCKFixedLength extends com.tmax.promapper.engine.base.
     /* marshal method */
     public byte [] marshalObject(Object obj) throws Exception {
         FixedLengthMarshalFieldV2 flFld = new FixedLengthMarshalFieldV2();
-        hwgi.f54.BKNIA_FILE_BLOCK __root = (hwgi.f54.BKNIA_FILE_BLOCK)obj;
+        hwgi.f54.FT_54PP_0000_000_DE0 __root = (hwgi.f54.FT_54PP_0000_000_DE0)obj;
 
         if(__root == null) {
             marshallNullObject(flFld);
         } else {
             
-            /** Sequences */
-            hwgi.f54.BKNIA_FILE_SEQFixedLength sequences = new hwgi.f54.BKNIA_FILE_SEQFixedLength(this.charsetName);
-            if(this.masked == true) {
-                sequences.setMasked(true);
-            }
-            if(__root.getSequences() == null) {
-                for(int i = 0; i < __root.sizeSequences(); i++) {
-                        flFld.setIncludeField(sequences, null);
-                }
-            } else {
-                int min = __root.sizeSequences() <= __root.sizeSequences()?__root.sizeSequences():(int)__root.sizeSequences();
-                for(int i = min; i < __root.sizeSequences(); i++)  {
-                    flFld.setIncludeField(sequences, null);                
-                }
-                for(int i = min - 1; i >= 0; i--)  {
-                        flFld.setIncludeField(sequences, __root.getSequences(i));
-                }
-            }
+            /** Data */
+            flFld.setBinaryField(this, __root.getData());
         }
         
         return flFld.getMessage();
@@ -87,48 +71,37 @@ public class BKNIA_FILE_BLOCKFixedLength extends com.tmax.promapper.engine.base.
         
     private void marshallNullObject(FixedLengthMarshalFieldV2 flFld) throws Exception {
             
-            /** Sequences */
-                
+            /** Data */
+
     }
 
     /* unmarshal method */
     public Object unmarshalObject(byte[] message, int startOffset) throws Exception{
-        hwgi.f54.BKNIA_FILE_BLOCK dataObject = new hwgi.f54.BKNIA_FILE_BLOCK();
+        hwgi.f54.FT_54PP_0000_000_DE0 dataObject = new hwgi.f54.FT_54PP_0000_000_DE0();
         setOffset(unmarshalObject(message, startOffset, dataObject));
             return dataObject;
     }
     
     public int unmarshalObject(byte[] message, int startOffset, Object dataObject) throws Exception {        
 
-        hwgi.f54.BKNIA_FILE_BLOCK __root = (hwgi.f54.BKNIA_FILE_BLOCK)dataObject;
+        hwgi.f54.FT_54PP_0000_000_DE0 __root = (hwgi.f54.FT_54PP_0000_000_DE0)dataObject;
         FixedLengthUnmarshalField flFld = new FixedLengthUnmarshalField(message, startOffset);
         
-        set_Sequences(__root, flFld);
+        set_Data(__root, flFld);
 
         setOffset(flFld.getOffset());
         __root.setMessageProperties(fieldPropertyMap);
         return getOffset();
     }
 
-    private void set_Sequences(hwgi.f54.BKNIA_FILE_BLOCK __root, FixedLengthUnmarshalField flFld) throws Exception {
+    private void set_Data(hwgi.f54.FT_54PP_0000_000_DE0 __root, FixedLengthUnmarshalField flFld) throws Exception {
         try {
 
-        /** Sequences */
-        hwgi.f54.BKNIA_FILE_SEQFixedLength __sequencesMsg = new hwgi.f54.BKNIA_FILE_SEQFixedLength(this.charsetName);
-        for (int i = 0; i < __root.sizeSequences(); i++) {
-            if(i < MAX_ARRAY_SIZE){
-                hwgi.f54.BKNIA_FILE_SEQ __sequences = new hwgi.f54.BKNIA_FILE_SEQ();
-                __root.addSequences(i, __sequences);
-                flFld.getIncludeField(__sequencesMsg, __sequences);
-            }
-            else {
-                throw new Exception("unmarshal stopped since the array index exceeds maximum value of array size which is set to "+ MAX_ARRAY_SIZE);
-            }
-        }
-
+        /** Data */
+        __root.setData(flFld.getBinaryField(this));
     successFieldCount++;
         } catch(Exception e) {
-            StringBuilder esb = new StringBuilder(e.getClass().getName()).append(" [FIELD: Sequences] ");
+            StringBuilder esb = new StringBuilder(e.getClass().getName()).append(" [FIELD: Data] ");
             if(e.getMessage() != null)
                 esb.append(": ").append(e.getMessage());
             throw new Exception(esb.toString(), e);
@@ -141,13 +114,12 @@ public class BKNIA_FILE_BLOCKFixedLength extends com.tmax.promapper.engine.base.
     }
     static {
 
-        fieldPropertyMap.put("Sequences", getProperty_Sequences());
+        fieldPropertyMap.put("Data", getProperty_Data());
     }
 
-    private static MessageFieldProperty getProperty_Sequences() {
+    private static MessageFieldProperty getProperty_Data() {
         MessageFieldProperty fldProp = null;
-        fldProp = new MessageFieldProperty("Sequences", "Sequences", MessageFieldType.INCLUDE, (String)null, "unbounded", null, Constants.ALIGN_NON, " ", 0, true, false, null, null, null, null, null, Constants.TRIM_NONE, Constants.ENCODE_CHAR);
-            fldProp.setIncludeMessageClass("hwgi.f54.BKNIA_FILE_SEQFixedLength");
+        fldProp = new MessageFieldProperty("Data", "Data", MessageFieldType.BINARY, (String)null, null, null, Constants.ALIGN_NON, " ", 0, true, false, null, null, null, null, null, Constants.TRIM_NONE, Constants.ENCODE_CHAR);
         return fldProp;
     }
 
@@ -169,13 +141,13 @@ public class BKNIA_FILE_BLOCKFixedLength extends com.tmax.promapper.engine.base.
     public String getMetaData(String input) {
 
         if (input.equalsIgnoreCase(META_PHYSICAL_NAME)) {
-            return "BKNIA_FILE_BLOCKFixedLength";
+            return "FT_54PP_0000_000_DE0FixedLength";
         } else if (input.equalsIgnoreCase(META_VERSION_NO)) {
             return null;
         } else if (input.equalsIgnoreCase(META_LOGICAL_NAME)) {
-            return "BKNIA_파일_BLOCK";
+            return "FT_54PP_0000_000_DE0";
         } else if (input.equalsIgnoreCase(META_RESOURCE_ID)) {
-            return "hwgi.f54:BKNIA_FILE_BLOCKFixedLength.msg";
+            return "hwgi.f54:FT_54PP_0000_000_DE0FixedLength.msg";
         } else if (input.equalsIgnoreCase(META_RESOURCE_TYPE)) {
             return "MESSAGE";
         } else if (input.equalsIgnoreCase(META_RESOURCE_PATH)) {
@@ -185,11 +157,11 @@ public class BKNIA_FILE_BLOCKFixedLength extends com.tmax.promapper.engine.base.
         } else if (input.equalsIgnoreCase(META_MESSAGE_TYPE)) {
               return "FixedLength";
         } else if (input.equalsIgnoreCase(META_MESSAGE_STRUCTURE_NAME)) {
-            return "BKNIA_FILE_BLOCK";
+            return "FT_54PP_0000_000_DE0";
         } else if (input.equalsIgnoreCase(META_MESSAGE_STRUCTURE_PATH)) {
             return "hwgi.f54";
         } else if (input.equalsIgnoreCase(META_MESSAGE_STRUCTURE_ID)) {
-            return "hwgi.f54:BKNIA_FILE_BLOCK.umsg";
+            return "hwgi.f54:FT_54PP_0000_000_DE0.umsg";
         } else {
             String msg = "Expecting one of " + META_PHYSICAL_NAME + ", "
                     + META_VERSION_NO + ", " + META_LOGICAL_NAME + ", "

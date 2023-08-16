@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><xpdl:Package xmlns:xpdl="http://www.wfmc.org/2004/XPDL2.0alpha" xmlns:tmax="http://www.tmaxsoft.com/anylink/XPDL20/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <xpdl:Pools>
+    <xpdl:Pool Id="txGrp_flow_Pool_156782" Orientation="VERTICAL" Process="BKNIA_FLOW_C0MM_ERR">
+      <xpdl:Lanes>
+        <xpdl:Lane Id="txGrp_flow_Lane_153083" Name="시스템 오류" ParentPool="txGrp_flow_Pool_156782">
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo BorderColor="c5ccfc" Height="500.0" Width="300.0"/>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Lane>
+        <xpdl:Lane Id="BKNIA_FLOW_C0MM_ERR_Lane_152F90" Name="파싱 오류" ParentPool="txGrp_flow_Pool_156782">
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo BorderColor="ff80c0" Height="500.0" Width="300.0"/>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Lane>
+      </xpdl:Lanes>
+    </xpdl:Pool>
+  </xpdl:Pools>
+  <xpdl:Artifacts>
+    <xpdl:Artifact ArtifactType="Annotation" Id="BKNIA_FLOW_C0MM_ERR_Text_14FBAB" Name="Note" tmax:annotationType="Note">
+      <tmax:AnnotationDescription>(오류코드 : 803) 기관코드 오류
+(오류코드 : 804) 종별코드 오류
+(오류코드 : 806) 송수신FLAG 오류</tmax:AnnotationDescription>
+      <xpdl:NodeGraphicsInfos>
+        <xpdl:NodeGraphicsInfo FillColor="ffffe1" Height="59.0" Width="198.0" tmax:fontColor="000000" tmax:parentId="BKNIA_FLOW_C0MM_ERR">
+          <xpdl:Coordinates XCoordinate="348.0" YCoordinate="27.0"/>
+        </xpdl:NodeGraphicsInfo>
+      </xpdl:NodeGraphicsInfos>
+    </xpdl:Artifact>
+  </xpdl:Artifacts>
+  <xpdl:WorkflowProcesses>
+    <xpdl:WorkflowProcess Id="BKNIA_FLOW_C0MM_ERR" Name="BKNIA_FLOW_C0MM_ERR" tmax:Package="hwgi.f54">
+      <xpdl:ProcessHeader>
+        <xpdl:Created>2022-07-14T16:36:58.000+09:00</xpdl:Created>
+        <xpdl:Description>This is a serviceflow process.</xpdl:Description>
+      </xpdl:ProcessHeader>
+      <xpdl:RedefinableHeader>
+        <xpdl:Author>admin</xpdl:Author>
+        <xpdl:Version>2.0.0</xpdl:Version>
+      </xpdl:RedefinableHeader>
+      <xpdl:FormalParameters/>
+      <xpdl:DataFields>
+        <xpdl:DataField Id="errorCode" Name="errorCode" tmax:visible="true">
+          <xpdl:DataType>
+            <xpdl:BasicType Type="STRING"/>
+          </xpdl:DataType>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute messageClassName="" messageID="" scope="instance"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+        <xpdl:DataField Id="errorString" Name="errorString" tmax:visible="true">
+          <xpdl:DataType>
+            <xpdl:BasicType Type="STRING"/>
+          </xpdl:DataType>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute messageClassName="" messageID="" scope="instance"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+        <xpdl:DataField Id="res_FT_54PP_0000_000_DE0" Name="res_FT_54PP_0000_000_DE0" tmax:visible="true">
+          <xpdl:DataType/>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="VariableExtendedAttribute">
+              <tmax:VariableExtendedAttribute messageClassName="hwgi.f54.FT_54PP_0000_000_DE0" messageID="hwgi.f54:FT_54PP_0000_000_DE0.umsg" scope="instance" type="DataObject"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+        </xpdl:DataField>
+      </xpdl:DataFields>
+      <xpdl:Activities>
+        <xpdl:Activity Id="BKNIA_FLOW_C0MM_SYSTEM_ERR_START" Name="Message">
+          <xpdl:Description>Message</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:StartEvent Trigger="Message">
+              <xpdl:TriggerResultMessage/>
+            </xpdl:StartEvent>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="ServiceExtendedAttribute">
+              <tmax:ServiceExtendedAttribute>
+                <tmax:outputVariableList>
+                  <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                </tmax:outputVariableList>
+              </tmax:ServiceExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+            <xpdl:ExtendedAttribute Name="MessageEventExtendedAttribute">
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54:BKNIA_FLOW_C0MM_ERR:BKNIA_FLOW_C0MM_SYSTEM_ERR_START" type="internal">
+                <tmax:mappingInfo>
+                  <tmax:outputVariableList>
+                    <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                  </tmax:outputVariableList>
+                </tmax:mappingInfo>
+              </tmax:EventExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates XCoordinate="131.0" YCoordinate="97.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity FinishMode="Automatic" Id="BKNIA_FLOW_C0MM_SYSTEM_ERR_REPLY" Name="ReplyMessage" StartMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" requestNodeId="BKNIA_FLOW_C0MM_SYSTEM_ERR_START" savePoint="false" taskMode="Service" transMode="Response" type="SENDMESSAGE">
+                <tmax:outputVariableList>
+                  <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                </tmax:outputVariableList>
+                <tmax:soapFaultReply>false</tmax:soapFaultReply>
+                <tmax:useOutboundResponseAttachment>false</tmax:useOutboundResponseAttachment>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo FillColor="6384bb" Height="40.0" Width="150.0" tmax:fontColor="3e3f40">
+              <xpdl:Coordinates XCoordinate="74.0" YCoordinate="281.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity FinishMode="Automatic" Id="BKNIA_FLOW_C0MM_PARSING_ERR_REPLY" Name="ReplyMessage" StartMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" requestNodeId="BKNIA_FLOW_C0MM_PARSING_ERR_START" savePoint="false" taskMode="Service" transMode="Response" type="SENDMESSAGE">
+                <tmax:outputVariableList>
+                  <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                </tmax:outputVariableList>
+                <tmax:soapFaultReply>false</tmax:soapFaultReply>
+                <tmax:useOutboundResponseAttachment>false</tmax:useOutboundResponseAttachment>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo FillColor="6384bb" Height="40.0" Width="150.0" tmax:fontColor="3e3f40">
+              <xpdl:Coordinates XCoordinate="372.0" YCoordinate="281.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="BKNIA_FLOW_C0MM_PARSING_ERR_START" Name="Message">
+          <xpdl:Description>Message</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:StartEvent Trigger="Message">
+              <xpdl:TriggerResultMessage/>
+            </xpdl:StartEvent>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="ServiceExtendedAttribute">
+              <tmax:ServiceExtendedAttribute>
+                <tmax:outputVariableList>
+                  <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                </tmax:outputVariableList>
+              </tmax:ServiceExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+            <xpdl:ExtendedAttribute Name="MessageEventExtendedAttribute">
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54:BKNIA_FLOW_C0MM_ERR:BKNIA_FLOW_C0MM_PARSING_ERR_START" type="internal">
+                <tmax:mappingInfo>
+                  <tmax:outputVariableList>
+                    <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                  </tmax:outputVariableList>
+                </tmax:mappingInfo>
+              </tmax:EventExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates XCoordinate="429.0" YCoordinate="97.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity FinishMode="Automatic" Id="BKNIA_FLOW_C0MM_SYSTEM_ERR_MAPPING" Name="SYSTEM ERROR" StartMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" taskMode="Mapping" type="MAPPING">
+                <tmax:Caption>SYSTEM
+ERROR</tmax:Caption>
+                <tmax:inputVariableList>
+                  <tmax:variableId>errorCode</tmax:variableId>
+                  <tmax:variableId>errorString</tmax:variableId>
+                </tmax:inputVariableList>
+                <tmax:outputVariableList>
+                  <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                </tmax:outputVariableList>
+                <tmax:inputMapping owner="MINE">
+                  <tmax:resourceClassName>BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_SYSTEM_ERR_MAPPINGIN</tmax:resourceClassName>
+                  <tmax:resourceId>hwgi.f54:BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_SYSTEM_ERR_MAPPINGIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54</tmax:resourcePath>
+                  <tmax:resourceContent>
+                    <map xmlns="http://www.tmaxsoft.com/promapper/map" creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_SYSTEM_ERR_MAPPINGIN" resourceGroup="" resourceId="hwgi.f54:BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_SYSTEM_ERR_MAPPINGIN.map" resourcePath="hwgi.f54" resourceType="MAP">
+                      <input alias="contextErrorCode_SRC" arraySize="0" comments="" logicalName="errorCode" physicalName="errorCode">
+                        <variable name="errorCode" scope="context" size="0">
+                          <primitive>String</primitive>
+                        </variable>
+                      </input>
+                      <input alias="contextErrorString_SRC" arraySize="0" comments="" logicalName="errorString" physicalName="errorString">
+                        <variable name="errorString" scope="context" size="0">
+                          <primitive>String</primitive>
+                        </variable>
+                      </input>
+                      <output alias="contextRes_FT_54PP_0000_000_DE0_TGT" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DE0_오류처리" physicalName="FT_54PP_0000_000_DE0" referenceId="hwgi.f54:FT_54PP_0000_000_DE0.umsg" resourcePath="hwgi.f54">
+                        <variable name="res_FT_54PP_0000_000_DE0" scope="context" size="0">
+                          <structure logicalName="FT_54PP_0000_000_DE0_오류처리" physicalName="FT_54PP_0000_000_DE0" resourceId="hwgi.f54:FT_54PP_0000_000_DE0.umsg" resourcePath="hwgi.f54"/>
+                        </variable>
+                      </output>
+                      <postProcessCode/>
+                      <userClassName>hwgi.f54.MH_54_SYSTEM_ERR_UH0</userClassName>
+                    </map>
+                  </tmax:resourceContent>
+                </tmax:inputMapping>
+                <tmax:soapFaultReply>false</tmax:soapFaultReply>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo FillColor="6384bb" Height="40.0" Width="150.0" tmax:fontColor="3e3f40">
+              <xpdl:Coordinates XCoordinate="74.0" YCoordinate="187.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity FinishMode="Automatic" Id="BKNIA_FLOW_C0MM_PARSING_ERR_MAPPING" Name="PARSING ERROR" StartMode="Automatic">
+          <xpdl:Description>Activity</xpdl:Description>
+          <xpdl:Implementation>
+            <xpdl:Task>
+              <xpdl:TaskManual/>
+            </xpdl:Task>
+          </xpdl:Implementation>
+          <xpdl:Priority>50</xpdl:Priority>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" taskMode="Mapping" type="MAPPING">
+                <tmax:Caption>PARSING
+ERROR</tmax:Caption>
+                <tmax:inputVariableList>
+                  <tmax:variableId>errorCode</tmax:variableId>
+                  <tmax:variableId>errorString</tmax:variableId>
+                </tmax:inputVariableList>
+                <tmax:outputVariableList>
+                  <tmax:variableId>res_FT_54PP_0000_000_DE0</tmax:variableId>
+                </tmax:outputVariableList>
+                <tmax:inputMapping owner="MINE">
+                  <tmax:resourceClassName>BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_PARSING_ERR_MAPPINGIN</tmax:resourceClassName>
+                  <tmax:resourceId>hwgi.f54:BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_PARSING_ERR_MAPPINGIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54</tmax:resourcePath>
+                  <tmax:resourceContent>
+                    <map xmlns="http://www.tmaxsoft.com/promapper/map" creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_PARSING_ERR_MAPPINGIN" resourceGroup="" resourceId="hwgi.f54:BKNIA_FLOW_C0MM_ERR_BKNIA_FLOW_C0MM_PARSING_ERR_MAPPINGIN.map" resourcePath="hwgi.f54" resourceType="MAP">
+                      <input alias="contextErrorCode_SRC" arraySize="0" comments="" logicalName="errorCode" physicalName="errorCode">
+                        <variable name="errorCode" scope="context" size="0">
+                          <primitive>String</primitive>
+                        </variable>
+                      </input>
+                      <input alias="contextErrorString_SRC" arraySize="0" comments="" logicalName="errorString" physicalName="errorString">
+                        <variable name="errorString" scope="context" size="0">
+                          <primitive>String</primitive>
+                        </variable>
+                      </input>
+                      <output alias="contextRes_FT_54PP_0000_000_DE0_TGT" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DE0_오류처리" physicalName="FT_54PP_0000_000_DE0" referenceId="hwgi.f54:FT_54PP_0000_000_DE0.umsg" resourcePath="hwgi.f54">
+                        <variable name="res_FT_54PP_0000_000_DE0" scope="context" size="0">
+                          <structure logicalName="FT_54PP_0000_000_DE0_오류처리" physicalName="FT_54PP_0000_000_DE0" resourceId="hwgi.f54:FT_54PP_0000_000_DE0.umsg" resourcePath="hwgi.f54"/>
+                        </variable>
+                      </output>
+                      <postProcessCode/>
+                      <userClassName>hwgi.f54.MH_54_PARSING_ERR_UH0</userClassName>
+                    </map>
+                  </tmax:resourceContent>
+                </tmax:inputMapping>
+                <tmax:soapFaultReply>false</tmax:soapFaultReply>
+              </tmax:TaskActivityExtendedAttribute>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo FillColor="6384bb" Height="40.0" Width="150.0" tmax:fontColor="3e3f40">
+              <xpdl:Coordinates XCoordinate="372.0" YCoordinate="187.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="BKNIA_FLOW_C0MM_SYSTEM_ERR_END" Name="None">
+          <xpdl:Description>None</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:EndEvent Result="None"/>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" type="internal"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates XCoordinate="131.0" YCoordinate="375.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+        <xpdl:Activity Id="BKNIA_FLOW_C0MM_PARSING_ERR_END" Name="None">
+          <xpdl:Description>None</xpdl:Description>
+          <xpdl:Event>
+            <xpdl:EndEvent Result="None"/>
+          </xpdl:Event>
+          <xpdl:ExtendedAttributes>
+            <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" type="internal"/>
+            </xpdl:ExtendedAttribute>
+          </xpdl:ExtendedAttributes>
+          <xpdl:NodeGraphicsInfos>
+            <xpdl:NodeGraphicsInfo>
+              <xpdl:Coordinates XCoordinate="429.0" YCoordinate="375.0"/>
+            </xpdl:NodeGraphicsInfo>
+          </xpdl:NodeGraphicsInfos>
+        </xpdl:Activity>
+      </xpdl:Activities>
+      <xpdl:Transitions>
+        <xpdl:Transition From="BKNIA_FLOW_C0MM_SYSTEM_ERR_START" Id="BKNIA_FLOW_C0MM_ERR_Transition_152D5B" Name="Transition" To="BKNIA_FLOW_C0MM_SYSTEM_ERR_MAPPING" tmax:priority="0">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition From="BKNIA_FLOW_C0MM_SYSTEM_ERR_REPLY" Id="BKNIA_FLOW_C0MM_ERR_Transition_150270" Name="Transition" To="BKNIA_FLOW_C0MM_SYSTEM_ERR_END" tmax:priority="0">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition From="BKNIA_FLOW_C0MM_PARSING_ERR_REPLY" Id="BKNIA_FLOW_C0MM_ERR_Transition_15356A" Name="Transition" To="BKNIA_FLOW_C0MM_PARSING_ERR_END" tmax:priority="0">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition From="BKNIA_FLOW_C0MM_PARSING_ERR_START" Id="BKNIA_FLOW_C0MM_ERR_Transition_150F62" Name="Transition" To="BKNIA_FLOW_C0MM_PARSING_ERR_MAPPING" tmax:priority="0">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition From="BKNIA_FLOW_C0MM_SYSTEM_ERR_MAPPING" Id="BKNIA_FLOW_C0MM_ERR_Transition_152C46" Name="Transition" To="BKNIA_FLOW_C0MM_SYSTEM_ERR_REPLY" tmax:priority="0">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+        <xpdl:Transition From="BKNIA_FLOW_C0MM_PARSING_ERR_MAPPING" Id="BKNIA_FLOW_C0MM_ERR_Transition_155C57" Name="Transition" To="BKNIA_FLOW_C0MM_PARSING_ERR_REPLY" tmax:priority="0">
+          <xpdl:Description>Transition</xpdl:Description>
+        </xpdl:Transition>
+      </xpdl:Transitions>
+      <xpdl:ExtendedAttributes>
+        <xpdl:ExtendedAttribute Name="ProcessExtendedAttribute">
+          <tmax:ProcessExtendedAttribute backgroundColor="ffffff" lastModifiedTime="2022-12-01T14:27:49.042+09:00" processTimeOut="0" serviceMake="true">
+            <tmax:errorCodeMapper xsi:nil="true"/>
+          </tmax:ProcessExtendedAttribute>
+        </xpdl:ExtendedAttribute>
+      </xpdl:ExtendedAttributes>
+    </xpdl:WorkflowProcess>
+  </xpdl:WorkflowProcesses>
+</xpdl:Package>

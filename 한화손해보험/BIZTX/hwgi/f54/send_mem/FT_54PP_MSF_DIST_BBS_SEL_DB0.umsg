@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="FT_54PP_MSF_DIST_BBS_SEL_DB0_송신테이블조회" physicalName="FT_54PP_MSF_DIST_BBS_SEL_DB0" resourceGroup="" resourceId="hwgi.f54.send_mem:FT_54PP_MSF_DIST_BBS_SEL_DB0.umsg" resourcePath="hwgi.f54.send_mem" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="[조회] 파일생성일" physicalName="RDATE"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="[조회] 시퀀스" physicalName="SEQNO"/>
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="string" logicalName="[조회] 파일명" physicalName="FNAME"/>
+  </mes:structure>
+</mes:umessage>

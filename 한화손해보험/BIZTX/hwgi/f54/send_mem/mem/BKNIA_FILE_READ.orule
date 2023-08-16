@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><ns0:outboundRuleInfo xmlns:ns0="http://www.tmaxsoft.com/schemas/anylink/" xmlns:ns1="http://www.tmaxsoft.com/schemas/anylink/common/" xmlns:ns2="http://www.tmaxsoft.com/schemas/anylink/reliableQueue/" xmlns:ns3="http://www.tmaxsoft.com/schemas/anylink/serverPlugin/">
-   <ns0:sysId>hwgi.f54.send_mem:BKNIA_FILE_READ.orule</ns0:sysId>
+   <ns0:sysId>hwgi.f54.send_mem.mem:BKNIA_FILE_READ.orule</ns0:sysId>
    <ns0:id>BKNIA_FILE_READ</ns0:id>
    <ns0:name>BKNIA_FILE_READ</ns0:name>
-   <ns0:package>hwgi.f54.send_mem</ns0:package>
+   <ns0:package>hwgi.f54.send_mem.mem</ns0:package>
    <ns0:version>0</ns0:version>
    <ns0:resourceType>OutboundRule</ns0:resourceType>
    <ns0:requestMessage>

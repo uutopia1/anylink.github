@@ -15,7 +15,7 @@ import com.tmax.promapper.engine.util.StringUtil;
 
 
 /**
- * @file              hwgi.f54.BKNIA_FILE_BLOCK.java
+ * @file              hwgi.f54.FT_54PP_0000_000_DE0.java
  * @filetype          java source file
  * @brief            
  * @version           1.0
@@ -26,82 +26,33 @@ import com.tmax.promapper.engine.util.StringUtil;
  * 
  */
 
-public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMeta {
+public class FT_54PP_0000_000_DE0 extends ProMapperDataObject implements ResourceMeta {
     private static final long serialVersionUID= 1L;
-    public BKNIA_FILE_BLOCK() {
+    public FT_54PP_0000_000_DE0() {
             super();
     }
     private boolean _setFlag = false;
-        private ArrayList<hwgi.f54.BKNIA_FILE_SEQ> Sequences = new ArrayList<hwgi.f54.BKNIA_FILE_SEQ>();
     
-    public void clearSequences() {
-        Sequences.clear();
-    }
+    private byte[] Data = null;
     
-    public void ensureCapacitySequences(int minCapacity) {
-        Sequences.ensureCapacity( minCapacity );
-    }
-    public void createSequences(int _size) {
-        Sequences.ensureCapacity(_size);
-        for(int i = Sequences.size(); i < _size; i++) {
-            Sequences.add(new hwgi.f54.BKNIA_FILE_SEQ());
-        }
-    }
-     public BKNIA_FILE_BLOCK fillSequences(int _index) {
-        createSequences(_index+1);
-        return this;
+    public byte[] getData() {
+        return Data;
     }
     
-    public int sizeSequences() {
-        if (Sequences != null)
-            return Sequences.size();
-        else
-            return 0;
-    }
-    
-    public hwgi.f54.BKNIA_FILE_SEQ[] getSequences() {
-        return (hwgi.f54.BKNIA_FILE_SEQ[])Sequences.toArray(new hwgi.f54.BKNIA_FILE_SEQ[Sequences.size()]);
-    }
-    public hwgi.f54.BKNIA_FILE_SEQ getSequences(int _index) {
-        return Sequences.get(_index);
-    }
-    
-    public void setSequences(hwgi.f54.BKNIA_FILE_SEQ[] Sequences) {
-        this.Sequences.clear();
-        for(int i = 0; i < Sequences.length; i++) {
-            this.Sequences.add(Sequences[i]);
-        }
+    public void setData(byte[] Data) {
+        this.Data = Data;
         _setFlag = true;
-    }
-    public void setSequences(int _index, hwgi.f54.BKNIA_FILE_SEQ Sequences) {
-        this.Sequences.set(_index, Sequences);
-        _setFlag = true;
-    }
-    
-    public void addSequences(int _index, hwgi.f54.BKNIA_FILE_SEQ Sequences) {
-        this.Sequences.add(_index, Sequences);
-        _setFlag = true;
-    }
-    public void addSequences(hwgi.f54.BKNIA_FILE_SEQ Sequences) {
-        this.Sequences.add(Sequences);
-        _setFlag = true;
-    }
-    
-    public hwgi.f54.BKNIA_FILE_SEQ removeSequences(int _index) {
-        return this.Sequences.remove(_index);
     }
     
     
     public Object clone() {
-        BKNIA_FILE_BLOCK copyObj = new BKNIA_FILE_BLOCK();
+        FT_54PP_0000_000_DE0 copyObj = new FT_54PP_0000_000_DE0();
         clone(copyObj);
         return copyObj;
     }
-    public void clone(proframe.dto.DataObject __bKNIA_FILE_BLOCK) {
-        BKNIA_FILE_BLOCK _bKNIA_FILE_BLOCK = (BKNIA_FILE_BLOCK) __bKNIA_FILE_BLOCK;
-        for (int index0 = 0; index0 < getSequences().length; index0++) {
-            _bKNIA_FILE_BLOCK.addSequences(index0, (hwgi.f54.BKNIA_FILE_SEQ)getSequences(index0).clone());
-        }
+    public void clone(proframe.dto.DataObject __fT_54PP_0000_000_DE0) {
+        FT_54PP_0000_000_DE0 _fT_54PP_0000_000_DE0 = (FT_54PP_0000_000_DE0) __fT_54PP_0000_000_DE0;
+        _fT_54PP_0000_000_DE0.setData(Data);
     }
     public String toString() {
         StringBuilder buffer = new StringBuilder();
@@ -114,19 +65,14 @@ public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMet
     }
     
     private void toString_0(StringBuilder buffer) {
+        com.tmax.promapper.engine.util.HexView hexView = new com.tmax.promapper.engine.util.HexView(); 
         int _size = 0; // field가 array인 경우 array size를 저장하는 변수
-        _size = sizeSequences();
-        if (_size == 0) {
-                buffer.append("Sequences : null\n");
-        }
-        for (int index = 0; index < _size; index++) {
-                buffer.append("Sequences(").append(index).append(") : ").append(getSequences(index)).append(" ");
-        }
-                            
-        
-            if(_size != 0 ) {
-                buffer.append("\n");
-            }
+                buffer.append("Data : \n");
+                if(Data == null) {
+                    buffer.append("null\n");
+                } else {
+                    buffer.append(hexView.dumpStringBuilder(Data, 0, Data.length, 0)).append("\n");
+                }
     }    
     public String toString(int limit) {
         StringBuilder buffer = new StringBuilder();
@@ -140,25 +86,16 @@ public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMet
     }
     
     private void toString_0(StringBuilder buffer, int limit) {
+        com.tmax.promapper.engine.util.HexView hexView = new com.tmax.promapper.engine.util.HexView(); 
         int _size = 0; // field가 array인 경우 array size를 저장하는 변수
-        _size = sizeSequences();
-        if (_size == 0) {
             if(buffer.length() < limit) {
-                buffer.append("Sequences : null\n");
+                buffer.append("Data : \n");
+                if(Data == null) {
+                    buffer.append("null\n");
+                } else {
+                    buffer.append(hexView.dumpStringBuilder(Data, 0, Data.length, 0)).append("\n");
+                }
             }
-        }
-        for (int index = 0; index < _size; index++) {
-            if (buffer.length() < limit) {
-                buffer.append("Sequences(").append(index).append(") : ").append(getSequences(index)).append(" ");
-            }
-        }
-                            
-        if(buffer.length() < limit) {
-        
-            if(_size != 0 ) {
-                buffer.append("\n");
-            }
-        }
     }    
     private static final Map fieldPropertyMap = null;
     
@@ -167,8 +104,8 @@ public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMet
         fieldPropertyMap = new java.util.LinkedHashMap( parentfieldPropertyMap.size() + 1);
         fieldPropertyMap.putAll( parentfieldPropertyMap );
 
-        fieldPropertyMap.put("Sequences"
-                            , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_INCLUDE, -1, "unbounded" , "hwgi.f54.BKNIA_FILE_SEQ"));
+        fieldPropertyMap.put("Data"
+                            , FieldPropertyFactory.getFieldProperty( FieldProperty.TYPE_ABSTRACT_BINARY, -1, null, null));
     }*/
     
     public Map getFieldPropertyMap() {
@@ -181,7 +118,7 @@ public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMet
     private static final List<String> fieldNameList = new ArrayList<String>(1);
     
     static {        
-        fieldNameList.add("Sequences");
+        fieldNameList.add("Data");
     }
     
     public List<String> getFieldNameList(){
@@ -196,7 +133,7 @@ public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMet
         int hashCode = fieldName.hashCode();
         
         switch(hashCode) {
-            case 890282162 : return getSequences();
+            case 2122698 : return getData();
             default : return null;
         }
     }
@@ -204,12 +141,12 @@ public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMet
         int hashCode = fieldName.hashCode();
         
         switch(hashCode) {
-            case 890282162 : setSequences((hwgi.f54.BKNIA_FILE_SEQ[])arg);break;
+            case 2122698 : setData((byte[])arg);break;
             default : return;
         }
     }
     public boolean isEmptyDataObjectMethod(){ 
-        if (Sequences.size() > 0) return false;
+        if (Data != null) return false;
 
         return true;
     }
@@ -229,13 +166,13 @@ public class BKNIA_FILE_BLOCK extends ProMapperDataObject implements ResourceMet
     public String getMetaData(String input) {
 
         if (input.equalsIgnoreCase(META_PHYSICAL_NAME)) {
-            return "BKNIA_FILE_BLOCK";
+            return "FT_54PP_0000_000_DE0";
         } else if (input.equalsIgnoreCase(META_VERSION_NO)){
             return "0";
         } else if (input.equalsIgnoreCase(META_LOGICAL_NAME)){
-            return "BKNIA_파일_BLOCK";
+            return "FT_54PP_0000_000_DE0_오류처리";
         } else if (input.equalsIgnoreCase(META_RESOURCE_ID)){
-            return "hwgi.f54:BKNIA_FILE_BLOCK.umsg";
+            return "hwgi.f54:FT_54PP_0000_000_DE0.umsg";
         } else if (input.equalsIgnoreCase(META_RESOURCE_TYPE)){
             return "STRUCTURE";
         } else if (input.equalsIgnoreCase(META_RESOURCE_PATH)){

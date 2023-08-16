@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure logicalName="FT_54PP_6000_320_DB1_데이터_레코드" physicalName="FT_54PP_6000_320_DB1" resourceGroup="" resourceId="hwgi.f54:FT_54PP_6000_320_DB1.umsg" resourcePath="hwgi.f54" resourceType="STRUCTURE" versionNo="0">
+    <str:structureField xmlns:str="http://www.tmaxsoft.com/promapper/structure" decimal="0" fieldType="binary" logicalName="record" physicalName="record"/>
+    <str:messageInfo xmlns:str="http://www.tmaxsoft.com/promapper/structure" messageId="hwgi.f54:FT_54PP_6000_320_DB1FixedLength.msg" messagePath="hwgi.f54" messagePhysicalName="FT_54PP_6000_320_DB1FixedLength" messageType="FixedLength"/>
+  </mes:structure>
+  <mes:message defaultEncoding="EUC-KR" logicalName="BKNIA_6000_320_DATA_RECORD" messageType="FixedLength" physicalName="FT_54PP_6000_320_DB1FixedLength" resourceGroup="" resourceId="hwgi.f54:FT_54PP_6000_320_DB1FixedLength.msg" resourcePath="hwgi.f54" resourceType="MESSAGE" structureId="hwgi.f54:FT_54PP_6000_320_DB1.umsg" structureName="FT_54PP_6000_320_DB1" structurePath="hwgi.f54" trimFlag="none">
+    <mes:messageField EOD="true" align="None" decimal="0" encodeOption="Char" endian="Little" fieldType="binary" fill="" length="" logicalName="record" pattern="yyyy-MM-dd" physicalName="record" point="true" sign="false" trailer=""/>
+  </mes:message>
+</mes:umessage>

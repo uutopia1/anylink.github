@@ -1,6 +1,7 @@
 package hwgi.f54.send_mem;
 
 import hwgi.f54.BKNIA_FILE_BLOCK;
+import hwgi.f54.BKNIA_Variables;
 
 import com.tmax.anylink.api.serviceflow.ActivityContext;
 import com.tmax.anylink.api.serviceflow.DefaultUserActivity;
@@ -13,6 +14,7 @@ public class UC_BKNIA_InitBlock extends DefaultUserActivity {
 
 	public void action(ActivityContext ctx) throws AnyLinkException {
 		Integer          loopBlk			   = (Integer)ctx.getVariableContent("loopBlk");
+		BKNIA_Variables  var_BKNIA_Variables   = (BKNIA_Variables)ctx.getVariableContent("var_BKNIA_Variables");
 		BKNIA_FILE_BLOCK var_BKNIA_FILE_BLOCK  = (BKNIA_FILE_BLOCK)ctx.getVariableContent("var_BKNIA_FILE_BLOCK");
 		
 		// 임시 Block 초기화
@@ -20,6 +22,7 @@ public class UC_BKNIA_InitBlock extends DefaultUserActivity {
 		
 		// loopBlk_Idx 는 루프용이라 초기값 0 , 전문에서 사용하는 block_no 는 1 부터 시작
 		long cur_blk_no = loopBlk.longValue() + 1;
+		var_BKNIA_Variables.setCur_blk_no(cur_blk_no);
 	}
 
 }

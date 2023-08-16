@@ -216,7 +216,7 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
     </xpdl:Artifact>
   </xpdl:Artifacts>
   <xpdl:WorkflowProcesses>
-    <xpdl:WorkflowProcess Id="BKNIA_FLOW_SEND" Name="BKNIA_FLOW_SEND" tmax:Package="hwgi.f54.send_mem">
+    <xpdl:WorkflowProcess Id="BKNIA_FLOW_SEND" Name="BKNIA_FLOW_SEND" tmax:Package="hwgi.f54.send_mem.mem">
       <xpdl:ProcessHeader>
         <xpdl:Created>2022-06-21T11:12:03+09:00</xpdl:Created>
         <xpdl:Description>This is a serviceflow process.</xpdl:Description>
@@ -493,7 +493,7 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
               <xpdl:Priority>50</xpdl:Priority>
               <xpdl:ExtendedAttributes>
                 <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6000_620.orule" taskMode="Service" transMode="Request" type="TCP">
+                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6000_620.orule" taskMode="Service" transMode="Request" type="TCP">
                     <tmax:Caption>결번확인
 (6000/620(300), RR)</tmax:Caption>
                     <tmax:inputVariableList>
@@ -507,10 +507,10 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
                     </tmax:outputVariableList>
                     <tmax:inputMapping>
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620IN</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620IN.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620IN.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620IN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620IN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620IN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620IN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                             <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                               <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -594,10 +594,10 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
                     </tmax:inputMapping>
                     <tmax:routingMapping owner="MINE">
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620ROUTING</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620ROUTING.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620ROUTING.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620ROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_620ROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                             <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                               <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -803,7 +803,7 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
               <xpdl:Priority>50</xpdl:Priority>
               <xpdl:ExtendedAttributes>
                 <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FILE_READ.orule" taskMode="Service" transMode="Request" type="FILE">
+                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FILE_READ.orule" taskMode="Service" transMode="Request" type="FILE">
                     <tmax:Caption>File Read
 (DATA)</tmax:Caption>
                     <tmax:inputVariableList>
@@ -814,10 +814,10 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
                     </tmax:outputVariableList>
                     <tmax:inputMapping>
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_1420BDIN</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_1420BDIN.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_1420BDIN.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_1420BDIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_1420BDIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_1420BDIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_1420BDIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                             <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                               <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -981,7 +981,7 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
               <xpdl:Priority>50</xpdl:Priority>
               <xpdl:ExtendedAttributes>
                 <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6000_320_DATA.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
+                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6000_320_DATA.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
                     <tmax:Caption>DATA 전송
 (6000/320, OW)</tmax:Caption>
                     <tmax:inputVariableList>
@@ -992,10 +992,10 @@ FILLER2 : FNAME</tmax:AnnotationDescription>
                     </tmax:inputVariableList>
                     <tmax:inputMapping>
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DIN</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DIN.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DIN.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                             <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                               <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -1089,10 +1089,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                     </tmax:inputMapping>
                     <tmax:routingMapping owner="MINE">
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DROUTING</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DROUTING.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DROUTING.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_DROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                             <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                               <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -1175,10 +1175,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                   <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" taskMode="Utility" type="UTILITY" utility="BatchProcess">
                     <tmax:inputMapping owner="MINE">
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_1473D6OUT</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_1473D6OUT.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_1473D6OUT.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_1473D6OUT" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_1473D6OUT.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_1473D6OUT" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_1473D6OUT.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_BKNIA_Variables_SRC" arraySize="0" comments="" logicalName="BKNIA_Variables" physicalName="BKNIA_Variables" referenceId="sonbo.f54:BKNIA_Variables.umsg" resourcePath="sonbo.f54">
                             <variable name="var_BKNIA_Variables" scope="context" size="0">
                               <structure logicalName="BKNIA_Variables" physicalName="BKNIA_Variables" resourceId="sonbo.f54:BKNIA_Variables.umsg" resourcePath="sonbo.f54"/>
@@ -1261,7 +1261,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
               <xpdl:Priority>50</xpdl:Priority>
               <xpdl:ExtendedAttributes>
                 <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6000_320_DATA.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
+                  <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6000_320_DATA.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
                     <tmax:Caption>결번 DATA 전송
 (6000/310, OW)</tmax:Caption>
                     <tmax:inputVariableList>
@@ -1273,10 +1273,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                     </tmax:inputVariableList>
                     <tmax:inputMapping>
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SIN</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SIN.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SIN.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                             <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                               <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -1375,10 +1375,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                     </tmax:inputMapping>
                     <tmax:routingMapping owner="MINE">
                       <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SROUTING</tmax:resourceClassName>
-                      <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SROUTING.map</tmax:resourceId>
-                      <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                      <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SROUTING.map</tmax:resourceId>
+                      <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                       <tmax:resourceContent>
-                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                        <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_SROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                           <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                             <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                               <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -1456,7 +1456,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
               </tmax:ServiceExtendedAttribute>
             </xpdl:ExtendedAttribute>
             <xpdl:ExtendedAttribute Name="MessageEventExtendedAttribute">
-              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_6000_001" type="internal">
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_6000_001" type="internal">
                 <tmax:mappingInfo>
                   <tmax:inputVariableList>
                     <tmax:variableId>var_FT_54PP_0000_000_DH0</tmax:variableId>
@@ -1517,7 +1517,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6010_001.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6010_001.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
                 <tmax:Caption>업무개시 응답
 (6010/001, OW)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -1526,10 +1526,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001IN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001IN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001IN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001IN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001IN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001IN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001IN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -1629,10 +1629,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputMapping>
                 <tmax:routingMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001ROUTING</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001ROUTING.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001ROUTING.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001ROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001ROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -1678,7 +1678,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FILE_READ.orule" taskMode="Service" transMode="Request" type="FILE">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FILE_READ.orule" taskMode="Service" transMode="Request" type="FILE">
                 <tmax:Caption>File Read
 (HEADER)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -1689,10 +1689,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_148195IN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_148195IN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_148195IN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_148195IN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_148195IN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_148195IN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_148195IN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                         <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                           <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -1820,7 +1820,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6000_320_HEADER_TRAILER.orule" taskMode="Service" transMode="Request" type="TCP">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6000_320_HEADER_TRAILER.orule" taskMode="Service" transMode="Request" type="TCP">
                 <tmax:Caption>HEADER 전송
 (6000/320(330), RR)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -1835,10 +1835,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HIN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HIN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                         <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                           <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -1932,10 +1932,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputMapping>
                 <tmax:routingMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HROUTING</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HROUTING.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HROUTING.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_HROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -2030,7 +2030,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           </xpdl:Event>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
-              <tmax:EventExtendedAttribute autoUnregister="true" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_ERROR_BLK" type="internal"/>
+              <tmax:EventExtendedAttribute autoUnregister="true" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_ERROR_BLK" type="internal"/>
             </xpdl:ExtendedAttribute>
           </xpdl:ExtendedAttributes>
           <xpdl:NodeGraphicsInfos>
@@ -2121,7 +2121,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FILE_READ.orule" taskMode="Service" transMode="Request" type="FILE">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FILE_READ.orule" taskMode="Service" transMode="Request" type="FILE">
                 <tmax:Caption>File Read
 (TRAILER)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -2132,10 +2132,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_149B20IN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_149B20IN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_149B20IN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_149B20IN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_149B20IN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_149B20IN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_File_149B20IN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                         <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                           <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -2263,7 +2263,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6000_320_HEADER_TRAILER.orule" taskMode="Service" transMode="Request" type="TCP">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6000_320_HEADER_TRAILER.orule" taskMode="Service" transMode="Request" type="TCP">
                 <tmax:Caption>TRAILER 전송
 (6000/320(330), RR)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -2278,10 +2278,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TIN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TIN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                         <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                           <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -2375,10 +2375,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputMapping>
                 <tmax:routingMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TROUTING</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TROUTING.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TROUTING.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_320_TROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -2446,7 +2446,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6000_003.orule" taskMode="Service" transMode="Request" type="TCP">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6000_003.orule" taskMode="Service" transMode="Request" type="TCP">
                 <tmax:Caption>개별업무종료
 (6000/003, RR)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -2461,10 +2461,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003IN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003IN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003IN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003IN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003IN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003IN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003IN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                         <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                           <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -2571,10 +2571,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputMapping>
                 <tmax:routingMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003ROUTING</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003ROUTING.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003ROUTING.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003ROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6000_003ROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -2620,7 +2620,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6010_004.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6010_004.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
                 <tmax:Caption>전업무종료응답
 (6010/004, OW)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -2631,10 +2631,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004IN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004IN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004IN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004IN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004IN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004IN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004IN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_BKNIA_BAT_RES_SRC" arraySize="0" comments="" logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" referenceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54">
                         <variable name="var_BKNIA_BAT_RES" scope="context" size="0">
                           <structure logicalName="BKNIA_BAT_RES" physicalName="BKNIA_BAT_RES" resourceId="sonbo.f54:BKNIA_BAT_RES.umsg" resourcePath="sonbo.f54"/>
@@ -2742,10 +2742,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputMapping>
                 <tmax:routingMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004ROUTING</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004ROUTING.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004ROUTING.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004ROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004ROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_004ROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -2864,7 +2864,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
               </tmax:ServiceExtendedAttribute>
             </xpdl:ExtendedAttribute>
             <xpdl:ExtendedAttribute Name="MessageEventExtendedAttribute">
-              <tmax:EventExtendedAttribute autoUnregister="true" checkPoint="false" lazyRegister="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_6000_004" type="internal">
+              <tmax:EventExtendedAttribute autoUnregister="true" checkPoint="false" lazyRegister="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_6000_004" type="internal">
                 <tmax:mappingInfo>
                   <tmax:inputVariableList>
                     <tmax:variableId>var_FT_54PP_0000_000_DH0</tmax:variableId>
@@ -3010,10 +3010,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULEIN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULEIN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULEIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULEIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULEIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULEIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULEIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -3097,7 +3097,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           </xpdl:Event>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
-              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_SystemError_START" type="internal"/>
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_SystemError_START" type="internal"/>
             </xpdl:ExtendedAttribute>
           </xpdl:ExtendedAttributes>
           <xpdl:NodeGraphicsInfos>
@@ -3115,7 +3115,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           </xpdl:Event>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
-              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_BizCheckError_START" type="internal"/>
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_BizCheckError_START" type="internal"/>
             </xpdl:ExtendedAttribute>
           </xpdl:ExtendedAttributes>
           <xpdl:NodeGraphicsInfos>
@@ -3156,10 +3156,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
               <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" taskMode="Utility" type="UTILITY" utility="BatchProcess">
                 <tmax:inputMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14DA14OUT</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14DA14OUT.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14DA14OUT.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14DA14OUT" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14DA14OUT.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14DA14OUT" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14DA14OUT.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextErrorCode_SRC" arraySize="0" comments="" logicalName="errorCode" physicalName="errorCode">
                         <variable name="errorCode" scope="context" size="0">
                           <primitive>String</primitive>
@@ -3220,10 +3220,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
               <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" taskMode="Utility" type="UTILITY" utility="BatchProcess">
                 <tmax:inputMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14CF18OUT</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14CF18OUT.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14CF18OUT.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14CF18OUT" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14CF18OUT.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14CF18OUT" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BATCH_PROGRESS_14CF18OUT.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_BKNIA_Variables_SRC" arraySize="0" comments="" logicalName="BKNIA_Variables" physicalName="BKNIA_Variables" referenceId="sonbo.f54:BKNIA_Variables.umsg" resourcePath="sonbo.f54">
                         <variable name="var_BKNIA_Variables" scope="context" size="0">
                           <structure logicalName="BKNIA_Variables" physicalName="BKNIA_Variables" resourceId="sonbo.f54:BKNIA_Variables.umsg" resourcePath="sonbo.f54"/>
@@ -3411,7 +3411,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           <xpdl:Priority>50</xpdl:Priority>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="TaskActivityExtendedAttribute">
-              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_TCP_6010_001.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
+              <tmax:TaskActivityExtendedAttribute checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_TCP_6010_001.orule" taskMode="Service" transMode="OnewayAck" type="TCP">
                 <tmax:Caption>업무개시오류응답
 (6010/001, OW)</tmax:Caption>
                 <tmax:inputVariableList>
@@ -3420,10 +3420,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRIN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRIN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -3524,10 +3524,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:inputMapping>
                 <tmax:routingMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRROUTING</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRROUTING.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRROUTING.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRROUTING.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRROUTING" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_6010_001_ERRROUTING.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -3646,7 +3646,7 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
           </xpdl:Event>
           <xpdl:ExtendedAttributes>
             <xpdl:ExtendedAttribute Name="EventExtendedAttribute">
-              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_BatchRuleError_START" type="internal"/>
+              <tmax:EventExtendedAttribute autoUnregister="false" checkPoint="false" noLogging="false" savePoint="false" serviceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND:BKNIA_FLOW_SEND_BatchRuleError_START" type="internal"/>
             </xpdl:ExtendedAttribute>
           </xpdl:ExtendedAttributes>
           <xpdl:NodeGraphicsInfos>
@@ -3681,10 +3681,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping>
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULE_LOGGINGIN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULE_LOGGINGIN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULE_LOGGINGIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULE_LOGGINGIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULE_LOGGINGIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULE_LOGGINGIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_MULTI_BATCH_RULE_LOGGINGIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
@@ -3812,10 +3812,10 @@ contextFT_54PP_6000_320_DB0_TGT.setRecordCnt( cur_record_cnt );</postProcessCode
                 </tmax:outputVariableList>
                 <tmax:inputMapping owner="MINE">
                   <tmax:resourceClassName>BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BatchRuleError_MappingIN</tmax:resourceClassName>
-                  <tmax:resourceId>hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BatchRuleError_MappingIN.map</tmax:resourceId>
-                  <tmax:resourcePath>hwgi.f54.send_mem</tmax:resourcePath>
+                  <tmax:resourceId>hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BatchRuleError_MappingIN.map</tmax:resourceId>
+                  <tmax:resourcePath>hwgi.f54.send_mem.mem</tmax:resourcePath>
                   <tmax:resourceContent>
-                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BatchRuleError_MappingIN" resourceGroup="" resourceId="hwgi.f54.send_mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BatchRuleError_MappingIN.map" resourcePath="hwgi.f54.send_mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
+                    <map creator="" logicalName="" owner="" physicalName="BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BatchRuleError_MappingIN" resourceGroup="" resourceId="hwgi.f54.send_mem.mem:BKNIA_FLOW_SEND_BKNIA_FLOW_SEND_BatchRuleError_MappingIN.map" resourcePath="hwgi.f54.send_mem.mem" resourceType="MAP" xmlns="http://www.tmaxsoft.com/promapper/map">
                       <input alias="contextVar_FT_54PP_0000_000_DH0_SRC" arraySize="0" comments="" logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" referenceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54">
                         <variable name="var_FT_54PP_0000_000_DH0" scope="context" size="0">
                           <structure logicalName="FT_54PP_0000_000_DH0_공통헤더" physicalName="FT_54PP_0000_000_DH0" resourceId="sonbo.f54:FT_54PP_0000_000_DH0.umsg" resourcePath="sonbo.f54"/>
