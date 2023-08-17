@@ -4,7 +4,7 @@
    <ns0:id>txGrp_1000</ns0:id>
    <ns0:name>[1000] 조회발급</ns0:name>
    <ns0:package>hwgi.o28.mem</ns0:package>
-   <ns0:version>5</ns0:version>
+   <ns0:version>6</ns0:version>
    <ns0:resourceType>BizNode</ns0:resourceType>
    <ns0:parentId>hwgi.o28.mem</ns0:parentId>
    <ns0:order>0</ns0:order>

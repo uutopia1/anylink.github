@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:outboundRuleInfo xmlns:ns0="http://www.tmaxsoft.com/schemas/anylink/" xmlns:ns2="http://www.tmaxsoft.com/schemas/anylink/reliableQueue/" xmlns:ns1="http://www.tmaxsoft.com/schemas/anylink/common/" xmlns:ns3="http://www.tmaxsoft.com/schemas/anylink/serverPlugin/">
+   <ns0:sysId>hwgi.o28.mem.txGrp_1000.tx_210:OutB_O28_1000_210.orule</ns0:sysId>
+   <ns0:id>OutB_O28_1000_210</ns0:id>
+   <ns0:name>OutB_O28_1000_210</ns0:name>
+   <ns0:package>hwgi.o28.mem.txGrp_1000.tx_210</ns0:package>
+   <ns0:resourceType>OutboundRule</ns0:resourceType>
+   <ns0:useResponseHeaderMessage>false</ns0:useResponseHeaderMessage>
+   <ns0:requestTimeout>10000</ns0:requestTimeout>
+   <ns0:protocol>TCP</ns0:protocol>
+   <ns0:tcpOutboundRuleInfo>
+      <ns0:callType>Sync</ns0:callType>
+   </ns0:tcpOutboundRuleInfo>
+</ns0:outboundRuleInfo>
