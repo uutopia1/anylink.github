@@ -33,7 +33,7 @@ public class UC_BKNIA_CheckData extends DefaultUserActivity {
 		
 		FT_54PP_0000_000_DH0         var_FT_54PP_0000_000_DH0         = (FT_54PP_0000_000_DH0)ctx.getVariableContent("var_FT_54PP_0000_000_DH0");
 		FT_54PP_6000_00X_DB0         var_FT_54PP_6000_00X_DB0         = (FT_54PP_6000_00X_DB0)ctx.getVariableContent("var_FT_54PP_6000_00X_DB0");
-		FT_54PP_MSF_DIST_BBS_SEL_DB0 var_FT_54PP_MSF_DIST_BBS_SEL_DB0 = (FT_54PP_MSF_DIST_BBS_SEL_DB0)ctx.getVariableContent("var_FT_54PP_MSF_DIST_BBS_SEL_DB0");
+		//FT_54PP_MSF_DIST_BBS_SEL_DB0 var_FT_54PP_MSF_DIST_BBS_SEL_DB0 = (FT_54PP_MSF_DIST_BBS_SEL_DB0)ctx.getVariableContent("var_FT_54PP_MSF_DIST_BBS_SEL_DB0");
 		
 		Context initCxt = null;
 		DataSource ds = null;
@@ -232,9 +232,9 @@ public class UC_BKNIA_CheckData extends DefaultUserActivity {
 							rdate = rs.getString(1);
 							seqno = rs.getString(2);
 							fname = rs.getString(3);
-							var_FT_54PP_MSF_DIST_BBS_SEL_DB0.setRDATE(rdate);
-							var_FT_54PP_MSF_DIST_BBS_SEL_DB0.setSEQNO(seqno);
-							var_FT_54PP_MSF_DIST_BBS_SEL_DB0.setFNAME(fname);
+							//var_FT_54PP_MSF_DIST_BBS_SEL_DB0.setRDATE(rdate);
+							//var_FT_54PP_MSF_DIST_BBS_SEL_DB0.setSEQNO(seqno);
+							//var_FT_54PP_MSF_DIST_BBS_SEL_DB0.setFNAME(fname);
 						}
 						
 						if(!"".equals(rdate) && !"".equals(seqno) && !"".equals(fname)) {

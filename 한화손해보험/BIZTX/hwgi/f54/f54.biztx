@@ -22,22 +22,6 @@
    <ns0:isSequential>No</ns0:isSequential>
    <ns0:isSystemCode>No</ns0:isSystemCode>
    <ns0:requestMessageValidation>Yes</ns0:requestMessageValidation>
-   <ns0:handlerList>
-      <ns0:sysId>hwgi.f54:AH_54_BAT_Logging</ns0:sysId>
-      <ns0:handlerType>AdapterMessage</ns0:handlerType>
-   </ns0:handlerList>
-   <ns0:handlerList>
-      <ns0:sysId>hwgi.f54:AH_54_MEM_Logging</ns0:sysId>
-      <ns0:handlerType>AdapterMessage</ns0:handlerType>
-   </ns0:handlerList>
-   <ns0:handlerList>
-      <ns0:sysId>hwgi.f54:MH_54_PARSING_ERR_UH0</ns0:sysId>
-      <ns0:handlerType>UserMapping</ns0:handlerType>
-   </ns0:handlerList>
-   <ns0:handlerList>
-      <ns0:sysId>hwgi.f54:MH_54_SYSTEM_ERR_UH0</ns0:sysId>
-      <ns0:handlerType>UserMapping</ns0:handlerType>
-   </ns0:handlerList>
    <ns0:branchingMethod>
       <ns0:method>None</ns0:method>
    </ns0:branchingMethod>

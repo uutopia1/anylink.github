@@ -59,10 +59,6 @@
       <ns0:handlerType>UserActivity</ns0:handlerType>
    </ns0:handlerList>
    <ns0:handlerList>
-      <ns0:sysId>hwgi.f54.send_mem:UC_BKNIA_UpdateResult</ns0:sysId>
-      <ns0:handlerType>UserActivity</ns0:handlerType>
-   </ns0:handlerList>
-   <ns0:handlerList>
       <ns0:sysId>hwgi.f54.send_mem:UC_BKNIA_SetDelayTime</ns0:sysId>
       <ns0:handlerType>UserTimer</ns0:handlerType>
    </ns0:handlerList>
