@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:umessage xmlns:mes="http://www.tmaxsoft.com/promapper/message">
+  <mes:structure physicalName="MSG" logicalName="MSG" resourceType="STRUCTURE" resourcePath="hwgi.o28.mem.txGrp_1000.tx_220" resourceId="hwgi.o28.mem.txGrp_1000.tx_220:MSG.umsg" resourceGroup=""/>
+</mes:umessage>
